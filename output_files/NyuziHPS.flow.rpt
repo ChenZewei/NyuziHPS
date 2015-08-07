@@ -1,0 +1,227 @@
+Flow report for NyuziHPS
+Fri Aug 07 11:44:34 2015
+Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Full Version
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Flow Summary
+  3. Flow Settings
+  4. Flow Non-Default Global Settings
+  5. Flow Elapsed Time
+  6. Flow OS Summary
+  7. Flow Log
+  8. Flow Messages
+  9. Flow Suppressed Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2013 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++----------------------------------------------------------------------------------------+
+; Flow Summary                                                                           ;
++-------------------------------------+--------------------------------------------------+
+; Flow Status                         ; Successful - Fri Aug 07 11:44:32 2015            ;
+; Quartus II 64-Bit Version           ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Full Version ;
+; Revision Name                       ; NyuziHPS                                         ;
+; Top-level Entity Name               ; fpga_top                                         ;
+; Family                              ; Cyclone V                                        ;
+; Device                              ; 5CSXFC6D6F31C8ES                                 ;
+; Timing Models                       ; Preliminary                                      ;
+; Logic utilization (in ALMs)         ; N/A                                              ;
+; Total registers                     ; 30413                                            ;
+; Total pins                          ; 168                                              ;
+; Total virtual pins                  ; 0                                                ;
+; Total block memory bits             ; 1,758,391                                        ;
+; Total DSP Blocks                    ; 88                                               ;
+; Total HSSI RX PCSs                  ; 0                                                ;
+; Total HSSI PMA RX Deserializers     ; 0                                                ;
+; Total HSSI PMA RX ATT Deserializers ; 0                                                ;
+; Total HSSI TX PCSs                  ; 0                                                ;
+; Total HSSI PMA TX Serializers       ; 0                                                ;
+; Total HSSI PMA TX ATT Serializers   ; 0                                                ;
+; Total PLLs                          ; 1                                                ;
+; Total DLLs                          ; 1                                                ;
++-------------------------------------+--------------------------------------------------+
+
+
++-----------------------------------------+
+; Flow Settings                           ;
++-------------------+---------------------+
+; Option            ; Setting             ;
++-------------------+---------------------+
+; Start date & time ; 08/07/2015 11:38:09 ;
+; Main task         ; Compilation         ;
+; Revision Name     ; NyuziHPS            ;
++-------------------+---------------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Flow Non-Default Global Settings                                                                                                                                                                          ;
++-------------------------------------+-------------------------------------------------------------------------+---------------+--------------------------------------------------------------+------------+
+; Assignment Name                     ; Value                                                                   ; Default Value ; Entity Name                                                  ; Section Id ;
++-------------------------------------+-------------------------------------------------------------------------+---------------+--------------------------------------------------------------+------------+
+; COMPILER_SIGNATURE_ID               ; 1095787358946.143891868904580                                           ; --            ; --                                                           ; --         ;
+; IP_TOOL_ENV                         ; Qsys                                                                    ; --            ; afi_mux_ddr3_ddrx                                            ; --         ;
+; IP_TOOL_ENV                         ; Qsys                                                                    ; --            ; alt_mem_ddrx_mm_st_converter                                 ; --         ;
+; IP_TOOL_ENV                         ; Qsys                                                                    ; --            ; alt_mem_if_nextgen_ddr3_controller_core                      ; --         ;
+; IP_TOOL_ENV                         ; Qsys                                                                    ; --            ; altera_avalon_packets_to_master                              ; --         ;
+; IP_TOOL_ENV                         ; Qsys                                                                    ; --            ; altera_avalon_sc_fifo                                        ; --         ;
+; IP_TOOL_ENV                         ; Qsys                                                                    ; --            ; altera_avalon_st_bytes_to_packets                            ; --         ;
+; IP_TOOL_ENV                         ; Qsys                                                                    ; --            ; altera_avalon_st_handshake_clock_crosser                     ; --         ;
+; IP_TOOL_ENV                         ; Qsys                                                                    ; --            ; altera_avalon_st_jtag_interface                              ; --         ;
+; IP_TOOL_ENV                         ; Qsys                                                                    ; --            ; altera_avalon_st_packets_to_bytes                            ; --         ;
+; IP_TOOL_ENV                         ; Qsys                                                                    ; --            ; altera_mem_if_dll_cyclonev                                   ; --         ;
+; IP_TOOL_ENV                         ; Qsys                                                                    ; --            ; altera_mem_if_oct_cyclonev                                   ; --         ;
+; IP_TOOL_ENV                         ; Qsys                                                                    ; --            ; altera_merlin_axi_master_ni                                  ; --         ;
+; IP_TOOL_ENV                         ; Qsys                                                                    ; --            ; altera_merlin_burst_adapter                                  ; --         ;
+; IP_TOOL_ENV                         ; Qsys                                                                    ; --            ; altera_merlin_master_translator                              ; --         ;
+; IP_TOOL_ENV                         ; Qsys                                                                    ; --            ; altera_merlin_slave_agent                                    ; --         ;
+; IP_TOOL_ENV                         ; Qsys                                                                    ; --            ; altera_merlin_slave_translator                               ; --         ;
+; IP_TOOL_ENV                         ; Qsys                                                                    ; --            ; altera_reset_controller                                      ; --         ;
+; IP_TOOL_ENV                         ; Qsys                                                                    ; --            ; fpga_sdram_controller                                        ; --         ;
+; IP_TOOL_ENV                         ; Qsys                                                                    ; --            ; fpga_sdram_controller_addr_router                            ; --         ;
+; IP_TOOL_ENV                         ; Qsys                                                                    ; --            ; fpga_sdram_controller_cmd_xbar_demux                         ; --         ;
+; IP_TOOL_ENV                         ; Qsys                                                                    ; --            ; fpga_sdram_controller_cmd_xbar_mux                           ; --         ;
+; IP_TOOL_ENV                         ; Qsys                                                                    ; --            ; fpga_sdram_controller_id_router                              ; --         ;
+; IP_TOOL_ENV                         ; Qsys                                                                    ; --            ; fpga_sdram_controller_mem_if_ddr3_emif_0                     ; --         ;
+; IP_TOOL_ENV                         ; Qsys                                                                    ; --            ; fpga_sdram_controller_mem_if_ddr3_emif_0_c0                  ; --         ;
+; IP_TOOL_ENV                         ; Qsys                                                                    ; --            ; fpga_sdram_controller_mem_if_ddr3_emif_0_dmaster             ; --         ;
+; IP_TOOL_ENV                         ; Qsys                                                                    ; --            ; fpga_sdram_controller_mem_if_ddr3_emif_0_dmaster_b2p_adapter ; --         ;
+; IP_TOOL_ENV                         ; Qsys                                                                    ; --            ; fpga_sdram_controller_mem_if_ddr3_emif_0_dmaster_p2b_adapter ; --         ;
+; IP_TOOL_ENV                         ; Qsys                                                                    ; --            ; fpga_sdram_controller_mem_if_ddr3_emif_0_dmaster_timing_adt  ; --         ;
+; IP_TOOL_ENV                         ; Qsys                                                                    ; --            ; fpga_sdram_controller_mem_if_ddr3_emif_0_p0                  ; --         ;
+; IP_TOOL_ENV                         ; Qsys                                                                    ; --            ; fpga_sdram_controller_mem_if_ddr3_emif_0_pll0                ; --         ;
+; IP_TOOL_ENV                         ; Qsys                                                                    ; --            ; fpga_sdram_controller_mem_if_ddr3_emif_0_s0                  ; --         ;
+; IP_TOOL_ENV                         ; Qsys                                                                    ; --            ; fpga_sdram_controller_rsp_xbar_demux                         ; --         ;
+; IP_TOOL_NAME                        ; altera_mem_if_ddr3_afi_mux                                              ; --            ; afi_mux_ddr3_ddrx                                            ; --         ;
+; IP_TOOL_NAME                        ; alt_mem_ddrx_mm_st_converter                                            ; --            ; alt_mem_ddrx_mm_st_converter                                 ; --         ;
+; IP_TOOL_NAME                        ; altera_mem_if_nextgen_ddr3_controller_core                              ; --            ; alt_mem_if_nextgen_ddr3_controller_core                      ; --         ;
+; IP_TOOL_NAME                        ; altera_avalon_packets_to_master                                         ; --            ; altera_avalon_packets_to_master                              ; --         ;
+; IP_TOOL_NAME                        ; altera_avalon_sc_fifo                                                   ; --            ; altera_avalon_sc_fifo                                        ; --         ;
+; IP_TOOL_NAME                        ; altera_avalon_st_bytes_to_packets                                       ; --            ; altera_avalon_st_bytes_to_packets                            ; --         ;
+; IP_TOOL_NAME                        ; altera_avalon_st_handshake_clock_crosser                                ; --            ; altera_avalon_st_handshake_clock_crosser                     ; --         ;
+; IP_TOOL_NAME                        ; altera_jtag_dc_streaming                                                ; --            ; altera_avalon_st_jtag_interface                              ; --         ;
+; IP_TOOL_NAME                        ; altera_avalon_st_packets_to_bytes                                       ; --            ; altera_avalon_st_packets_to_bytes                            ; --         ;
+; IP_TOOL_NAME                        ; altera_mem_if_dll                                                       ; --            ; altera_mem_if_dll_cyclonev                                   ; --         ;
+; IP_TOOL_NAME                        ; altera_mem_if_oct                                                       ; --            ; altera_mem_if_oct_cyclonev                                   ; --         ;
+; IP_TOOL_NAME                        ; altera_merlin_axi_master_ni                                             ; --            ; altera_merlin_axi_master_ni                                  ; --         ;
+; IP_TOOL_NAME                        ; altera_merlin_burst_adapter                                             ; --            ; altera_merlin_burst_adapter                                  ; --         ;
+; IP_TOOL_NAME                        ; altera_merlin_master_translator                                         ; --            ; altera_merlin_master_translator                              ; --         ;
+; IP_TOOL_NAME                        ; altera_merlin_slave_agent                                               ; --            ; altera_merlin_slave_agent                                    ; --         ;
+; IP_TOOL_NAME                        ; altera_merlin_slave_translator                                          ; --            ; altera_merlin_slave_translator                               ; --         ;
+; IP_TOOL_NAME                        ; altera_reset_controller                                                 ; --            ; altera_reset_controller                                      ; --         ;
+; IP_TOOL_NAME                        ; Qsys                                                                    ; --            ; fpga_sdram_controller                                        ; --         ;
+; IP_TOOL_NAME                        ; altera_merlin_router                                                    ; --            ; fpga_sdram_controller_addr_router                            ; --         ;
+; IP_TOOL_NAME                        ; altera_merlin_demultiplexer                                             ; --            ; fpga_sdram_controller_cmd_xbar_demux                         ; --         ;
+; IP_TOOL_NAME                        ; altera_merlin_multiplexer                                               ; --            ; fpga_sdram_controller_cmd_xbar_mux                           ; --         ;
+; IP_TOOL_NAME                        ; altera_merlin_router                                                    ; --            ; fpga_sdram_controller_id_router                              ; --         ;
+; IP_TOOL_NAME                        ; altera_mem_if_ddr3_emif                                                 ; --            ; fpga_sdram_controller_mem_if_ddr3_emif_0                     ; --         ;
+; IP_TOOL_NAME                        ; altera_mem_if_nextgen_ddr3_controller                                   ; --            ; fpga_sdram_controller_mem_if_ddr3_emif_0_c0                  ; --         ;
+; IP_TOOL_NAME                        ; alt_mem_if_jtag_master                                                  ; --            ; fpga_sdram_controller_mem_if_ddr3_emif_0_dmaster             ; --         ;
+; IP_TOOL_NAME                        ; channel_adapter                                                         ; --            ; fpga_sdram_controller_mem_if_ddr3_emif_0_dmaster_b2p_adapter ; --         ;
+; IP_TOOL_NAME                        ; channel_adapter                                                         ; --            ; fpga_sdram_controller_mem_if_ddr3_emif_0_dmaster_p2b_adapter ; --         ;
+; IP_TOOL_NAME                        ; timing_adapter                                                          ; --            ; fpga_sdram_controller_mem_if_ddr3_emif_0_dmaster_timing_adt  ; --         ;
+; IP_TOOL_NAME                        ; altera_mem_if_ddr3_phy_core                                             ; --            ; fpga_sdram_controller_mem_if_ddr3_emif_0_p0                  ; --         ;
+; IP_TOOL_NAME                        ; altera_mem_if_ddr3_pll                                                  ; --            ; fpga_sdram_controller_mem_if_ddr3_emif_0_pll0                ; --         ;
+; IP_TOOL_NAME                        ; altera_mem_if_ddr3_qseq                                                 ; --            ; fpga_sdram_controller_mem_if_ddr3_emif_0_s0                  ; --         ;
+; IP_TOOL_NAME                        ; altera_merlin_demultiplexer                                             ; --            ; fpga_sdram_controller_rsp_xbar_demux                         ; --         ;
+; IP_TOOL_VERSION                     ; 13.0                                                                    ; --            ; afi_mux_ddr3_ddrx                                            ; --         ;
+; IP_TOOL_VERSION                     ; 13.0                                                                    ; --            ; alt_mem_ddrx_mm_st_converter                                 ; --         ;
+; IP_TOOL_VERSION                     ; 13.0                                                                    ; --            ; alt_mem_if_nextgen_ddr3_controller_core                      ; --         ;
+; IP_TOOL_VERSION                     ; 13.0                                                                    ; --            ; altera_avalon_packets_to_master                              ; --         ;
+; IP_TOOL_VERSION                     ; 13.0                                                                    ; --            ; altera_avalon_sc_fifo                                        ; --         ;
+; IP_TOOL_VERSION                     ; 11.1                                                                    ; --            ; altera_avalon_st_bytes_to_packets                            ; --         ;
+; IP_TOOL_VERSION                     ; 13.0                                                                    ; --            ; altera_avalon_st_handshake_clock_crosser                     ; --         ;
+; IP_TOOL_VERSION                     ; 13.0                                                                    ; --            ; altera_avalon_st_jtag_interface                              ; --         ;
+; IP_TOOL_VERSION                     ; 11.1                                                                    ; --            ; altera_avalon_st_packets_to_bytes                            ; --         ;
+; IP_TOOL_VERSION                     ; 13.0                                                                    ; --            ; altera_mem_if_dll_cyclonev                                   ; --         ;
+; IP_TOOL_VERSION                     ; 13.0                                                                    ; --            ; altera_mem_if_oct_cyclonev                                   ; --         ;
+; IP_TOOL_VERSION                     ; 13.0                                                                    ; --            ; altera_merlin_axi_master_ni                                  ; --         ;
+; IP_TOOL_VERSION                     ; 13.0                                                                    ; --            ; altera_merlin_burst_adapter                                  ; --         ;
+; IP_TOOL_VERSION                     ; 13.0                                                                    ; --            ; altera_merlin_master_translator                              ; --         ;
+; IP_TOOL_VERSION                     ; 13.0                                                                    ; --            ; altera_merlin_slave_agent                                    ; --         ;
+; IP_TOOL_VERSION                     ; 13.0                                                                    ; --            ; altera_merlin_slave_translator                               ; --         ;
+; IP_TOOL_VERSION                     ; 13.0                                                                    ; --            ; altera_reset_controller                                      ; --         ;
+; IP_TOOL_VERSION                     ; 13.0sp1                                                                 ; --            ; fpga_sdram_controller                                        ; --         ;
+; IP_TOOL_VERSION                     ; 13.0                                                                    ; --            ; fpga_sdram_controller_addr_router                            ; --         ;
+; IP_TOOL_VERSION                     ; 13.0                                                                    ; --            ; fpga_sdram_controller_cmd_xbar_demux                         ; --         ;
+; IP_TOOL_VERSION                     ; 13.0                                                                    ; --            ; fpga_sdram_controller_cmd_xbar_mux                           ; --         ;
+; IP_TOOL_VERSION                     ; 13.0                                                                    ; --            ; fpga_sdram_controller_id_router                              ; --         ;
+; IP_TOOL_VERSION                     ; 13.0                                                                    ; --            ; fpga_sdram_controller_mem_if_ddr3_emif_0                     ; --         ;
+; IP_TOOL_VERSION                     ; 13.0                                                                    ; --            ; fpga_sdram_controller_mem_if_ddr3_emif_0_c0                  ; --         ;
+; IP_TOOL_VERSION                     ; 100.99.98.97                                                            ; --            ; fpga_sdram_controller_mem_if_ddr3_emif_0_dmaster             ; --         ;
+; IP_TOOL_VERSION                     ; 13.0                                                                    ; --            ; fpga_sdram_controller_mem_if_ddr3_emif_0_dmaster_b2p_adapter ; --         ;
+; IP_TOOL_VERSION                     ; 13.0                                                                    ; --            ; fpga_sdram_controller_mem_if_ddr3_emif_0_dmaster_p2b_adapter ; --         ;
+; IP_TOOL_VERSION                     ; 13.0                                                                    ; --            ; fpga_sdram_controller_mem_if_ddr3_emif_0_dmaster_timing_adt  ; --         ;
+; IP_TOOL_VERSION                     ; 13.0                                                                    ; --            ; fpga_sdram_controller_mem_if_ddr3_emif_0_p0                  ; --         ;
+; IP_TOOL_VERSION                     ; 13.0                                                                    ; --            ; fpga_sdram_controller_mem_if_ddr3_emif_0_pll0                ; --         ;
+; IP_TOOL_VERSION                     ; 13.0                                                                    ; --            ; fpga_sdram_controller_mem_if_ddr3_emif_0_s0                  ; --         ;
+; IP_TOOL_VERSION                     ; 13.0                                                                    ; --            ; fpga_sdram_controller_rsp_xbar_demux                         ; --         ;
+; MAX_CORE_JUNCTION_TEMP              ; 85                                                                      ; --            ; --                                                           ; --         ;
+; MIN_CORE_JUNCTION_TEMP              ; 0                                                                       ; --            ; --                                                           ; --         ;
+; MISC_FILE                           ; fpga_sdram_controller/synthesis/../../fpga_sdram_controller.cmp         ; --            ; --                                                           ; --         ;
+; MISC_FILE                           ; fpga_sdram_controller/synthesis/../../fpga_sdram_controller.qsys        ; --            ; --                                                           ; --         ;
+; MISC_FILE                           ; fpga_sdram_controller/synthesis/submodules/alt_mem_ddrx_define.iv       ; --            ; --                                                           ; --         ;
+; PARTITION_COLOR                     ; 16764057                                                                ; --            ; fpga_top                                                     ; Top        ;
+; PARTITION_FITTER_PRESERVATION_LEVEL ; PLACEMENT_AND_ROUTING                                                   ; --            ; fpga_top                                                     ; Top        ;
+; PARTITION_NETLIST_TYPE              ; SOURCE                                                                  ; --            ; fpga_top                                                     ; Top        ;
+; POWER_BOARD_THERMAL_MODEL           ; None (CONSERVATIVE)                                                     ; --            ; --                                                           ; --         ;
+; POWER_PRESET_COOLING_SOLUTION       ; 23 MM HEAT SINK WITH 200 LFPM AIRFLOW                                   ; --            ; --                                                           ; --         ;
+; PROJECT_OUTPUT_DIRECTORY            ; output_files                                                            ; --            ; --                                                           ; --         ;
+; SEARCH_PATH                         ; c:\users\administrator\documents\nyuzihps\core                          ; --            ; --                                                           ; --         ;
+; SLD_INFO                            ; QSYS_NAME fpga_sdram_controller HAS_SOPCINFO 1 GENERATION_ID 1438912171 ; --            ; fpga_sdram_controller                                        ; --         ;
+; SOPCINFO_FILE                       ; fpga_sdram_controller/synthesis/../../fpga_sdram_controller.sopcinfo    ; --            ; --                                                           ; --         ;
+; SYNTHESIS_ONLY_QIP                  ; On                                                                      ; --            ; --                                                           ; --         ;
+; TOP_LEVEL_ENTITY                    ; fpga_top                                                                ; NyuziHPS      ; --                                                           ; --         ;
+; VERILOG_INPUT_VERSION               ; SystemVerilog_2005                                                      ; Verilog_2001  ; --                                                           ; --         ;
+; VERILOG_MACRO                       ; VENDOR_ALTERA=1                                                         ; --            ; --                                                           ; --         ;
+; VERILOG_SHOW_LMF_MAPPING_MESSAGES   ; Off                                                                     ; --            ; --                                                           ; --         ;
++-------------------------------------+-------------------------------------------------------------------------+---------------+--------------------------------------------------------------+------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------+
+; Flow Elapsed Time                                                                                                        ;
++----------------------+--------------+-------------------------+---------------------+------------------------------------+
+; Module Name          ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
++----------------------+--------------+-------------------------+---------------------+------------------------------------+
+; Analysis & Synthesis ; 00:06:07     ; 1.0                     ; 1551 MB             ; 00:06:06                           ;
+; Total                ; 00:06:07     ; --                      ; --                  ; 00:06:06                           ;
++----------------------+--------------+-------------------------+---------------------+------------------------------------+
+
+
++-----------------------------------------------------------------------------------+
+; Flow OS Summary                                                                   ;
++----------------------+------------------+-----------+------------+----------------+
+; Module Name          ; Machine Hostname ; OS Name   ; OS Version ; Processor type ;
++----------------------+------------------+-----------+------------+----------------+
+; Analysis & Synthesis ; CL-20150204PRIF  ; Windows 7 ; 6.1        ; x86_64         ;
++----------------------+------------------+-----------+------------+----------------+
+
+
+------------
+; Flow Log ;
+------------
+quartus_map --read_settings_files=on --write_settings_files=off NyuziHPS -c NyuziHPS
+
+
+

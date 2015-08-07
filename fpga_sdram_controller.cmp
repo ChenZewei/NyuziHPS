@@ -1,0 +1,58 @@
+	component fpga_sdram_controller is
+		port (
+			clk_clk                      : in    std_logic                     := 'X';             -- clk
+			reset_reset_n                : in    std_logic                     := 'X';             -- reset_n
+			memory_mem_a                 : out   std_logic_vector(12 downto 0);                    -- mem_a
+			memory_mem_ba                : out   std_logic_vector(2 downto 0);                     -- mem_ba
+			memory_mem_ck                : out   std_logic_vector(0 downto 0);                     -- mem_ck
+			memory_mem_ck_n              : out   std_logic_vector(0 downto 0);                     -- mem_ck_n
+			memory_mem_cke               : out   std_logic_vector(0 downto 0);                     -- mem_cke
+			memory_mem_cs_n              : out   std_logic_vector(0 downto 0);                     -- mem_cs_n
+			memory_mem_dm                : out   std_logic_vector(0 downto 0);                     -- mem_dm
+			memory_mem_ras_n             : out   std_logic_vector(0 downto 0);                     -- mem_ras_n
+			memory_mem_cas_n             : out   std_logic_vector(0 downto 0);                     -- mem_cas_n
+			memory_mem_we_n              : out   std_logic_vector(0 downto 0);                     -- mem_we_n
+			memory_mem_reset_n           : out   std_logic;                                        -- mem_reset_n
+			memory_mem_dq                : inout std_logic_vector(7 downto 0)  := (others => 'X'); -- mem_dq
+			memory_mem_dqs               : inout std_logic_vector(0 downto 0)  := (others => 'X'); -- mem_dqs
+			memory_mem_dqs_n             : inout std_logic_vector(0 downto 0)  := (others => 'X'); -- mem_dqs_n
+			memory_mem_odt               : out   std_logic_vector(0 downto 0);                     -- mem_odt
+			oct_rzqin                    : in    std_logic                     := 'X';             -- rzqin
+			axi_translator_slave_awid    : in    std_logic_vector(3 downto 0)  := (others => 'X'); -- awid
+			axi_translator_slave_awaddr  : in    std_logic_vector(31 downto 0) := (others => 'X'); -- awaddr
+			axi_translator_slave_awlen   : in    std_logic_vector(7 downto 0)  := (others => 'X'); -- awlen
+			axi_translator_slave_awsize  : in    std_logic_vector(2 downto 0)  := (others => 'X'); -- awsize
+			axi_translator_slave_awburst : in    std_logic_vector(1 downto 0)  := (others => 'X'); -- awburst
+			axi_translator_slave_awlock  : in    std_logic_vector(0 downto 0)  := (others => 'X'); -- awlock
+			axi_translator_slave_awcache : in    std_logic_vector(3 downto 0)  := (others => 'X'); -- awcache
+			axi_translator_slave_awprot  : in    std_logic_vector(2 downto 0)  := (others => 'X'); -- awprot
+			axi_translator_slave_awvalid : in    std_logic                     := 'X';             -- awvalid
+			axi_translator_slave_awready : out   std_logic;                                        -- awready
+			axi_translator_slave_wdata   : in    std_logic_vector(31 downto 0) := (others => 'X'); -- wdata
+			axi_translator_slave_wstrb   : in    std_logic_vector(3 downto 0)  := (others => 'X'); -- wstrb
+			axi_translator_slave_wlast   : in    std_logic                     := 'X';             -- wlast
+			axi_translator_slave_wvalid  : in    std_logic                     := 'X';             -- wvalid
+			axi_translator_slave_wready  : out   std_logic;                                        -- wready
+			axi_translator_slave_bid     : out   std_logic_vector(3 downto 0);                     -- bid
+			axi_translator_slave_bresp   : out   std_logic_vector(1 downto 0);                     -- bresp
+			axi_translator_slave_bvalid  : out   std_logic;                                        -- bvalid
+			axi_translator_slave_bready  : in    std_logic                     := 'X';             -- bready
+			axi_translator_slave_arid    : in    std_logic_vector(3 downto 0)  := (others => 'X'); -- arid
+			axi_translator_slave_araddr  : in    std_logic_vector(31 downto 0) := (others => 'X'); -- araddr
+			axi_translator_slave_arlen   : in    std_logic_vector(7 downto 0)  := (others => 'X'); -- arlen
+			axi_translator_slave_arsize  : in    std_logic_vector(2 downto 0)  := (others => 'X'); -- arsize
+			axi_translator_slave_arburst : in    std_logic_vector(1 downto 0)  := (others => 'X'); -- arburst
+			axi_translator_slave_arlock  : in    std_logic_vector(0 downto 0)  := (others => 'X'); -- arlock
+			axi_translator_slave_arcache : in    std_logic_vector(3 downto 0)  := (others => 'X'); -- arcache
+			axi_translator_slave_arprot  : in    std_logic_vector(2 downto 0)  := (others => 'X'); -- arprot
+			axi_translator_slave_arvalid : in    std_logic                     := 'X';             -- arvalid
+			axi_translator_slave_arready : out   std_logic;                                        -- arready
+			axi_translator_slave_rid     : out   std_logic_vector(3 downto 0);                     -- rid
+			axi_translator_slave_rdata   : out   std_logic_vector(31 downto 0);                    -- rdata
+			axi_translator_slave_rresp   : out   std_logic_vector(1 downto 0);                     -- rresp
+			axi_translator_slave_rlast   : out   std_logic;                                        -- rlast
+			axi_translator_slave_rvalid  : out   std_logic;                                        -- rvalid
+			axi_translator_slave_rready  : in    std_logic                     := 'X'              -- rready
+		);
+	end component fpga_sdram_controller;
+

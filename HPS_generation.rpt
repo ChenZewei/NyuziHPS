@@ -1,0 +1,51 @@
+Info: Starting: Create block symbol file (.bsf)
+Info: ip-generate --project-directory="C:/Users/ThinkPad/Documents/Quartus II/NyuziHPS/" --output-directory="C:/Users/ThinkPad/Documents/Quartus II/NyuziHPS/HPS/" --report-file="bsf:C:/Users/ThinkPad/Documents/Quartus II/NyuziHPS/HPS.bsf" --system-info=DEVICE_FAMILY="Cyclone V" --system-info=DEVICE=5CSXFC6D6F31C8ES --system-info=DEVICE_SPEEDGRADE=8_H6 --component-file="C:/Users/ThinkPad/Documents/Quartus II/NyuziHPS/HPS.qsys"
+Progress: Loading NyuziHPS/HPS.qsys
+Progress: Reading input file
+Progress: Adding clk_0 [clock_source 13.0]
+Progress: Parameterizing module clk_0
+Progress: Adding hps_0 [altera_hps 13.0.1]
+Progress: Parameterizing module hps_0
+Progress: Building connections
+Progress: Parameterizing connections
+Progress: Validating
+Progress: Done reading input file
+Warning: HPS.hps_0: ODT is disabled. Enabling ODT (Mode Register 1) may improve signal integrity
+Info: ip-generate succeeded.
+Info: Finished: Create block symbol file (.bsf)
+Info: 
+Info: Starting: Create HDL design files for synthesis
+Info: ip-generate --project-directory="C:/Users/ThinkPad/Documents/Quartus II/NyuziHPS/" --output-directory="C:/Users/ThinkPad/Documents/Quartus II/NyuziHPS/HPS/synthesis/" --file-set=QUARTUS_SYNTH --report-file="sopcinfo:C:/Users/ThinkPad/Documents/Quartus II/NyuziHPS/HPS.sopcinfo" --report-file="html:C:/Users/ThinkPad/Documents/Quartus II/NyuziHPS/HPS.html" --report-file="qip:C:/Users/ThinkPad/Documents/Quartus II/NyuziHPS/HPS/synthesis/HPS.qip" --report-file="cmp:C:/Users/ThinkPad/Documents/Quartus II/NyuziHPS/HPS.cmp" --report-file=svd --system-info=DEVICE_FAMILY="Cyclone V" --system-info=DEVICE=5CSXFC6D6F31C8ES --system-info=DEVICE_SPEEDGRADE=8_H6 --component-file="C:/Users/ThinkPad/Documents/Quartus II/NyuziHPS/HPS.qsys" --language=VERILOG
+Progress: Loading NyuziHPS/HPS.qsys
+Progress: Reading input file
+Progress: Adding clk_0 [clock_source 13.0]
+Progress: Parameterizing module clk_0
+Progress: Adding hps_0 [altera_hps 13.0.1]
+Progress: Parameterizing module hps_0
+Progress: Building connections
+Progress: Parameterizing connections
+Progress: Validating
+Progress: Done reading input file
+Warning: HPS.hps_0: ODT is disabled. Enabling ODT (Mode Register 1) may improve signal integrity
+Info: HPS: Generating HPS "HPS" for QUARTUS_SYNTH
+Info: pipeline_bridge_swap_transform: After transform: 2 modules, 1 connections
+Info: No custom instruction connections, skipping transform 
+Info: No Avalon connections, skipping transform 
+Info: merlin_translator_transform: After transform: 2 modules, 1 connections
+Info: hps_0: "Doing Pretransform for module: hps_0"
+Warning: hps_0: ODT is disabled. Enabling ODT (Mode Register 1) may improve signal integrity
+Info: pipeline_bridge_swap_transform: After transform: 2 modules, 0 connections
+Info: No custom instruction connections, skipping transform 
+Info: No Avalon connections, skipping transform 
+Info: merlin_translator_transform: After transform: 2 modules, 0 connections
+Info: hps_0: "HPS" instantiated altera_hps "hps_0"
+Info: fpga_interfaces: "hps_0" instantiated altera_interface_generator "fpga_interfaces"
+Info: pipeline_bridge_swap_transform: After transform: 1 modules, 0 connections
+Info: No custom instruction connections, skipping transform 
+Info: No Avalon connections, skipping transform 
+Info: merlin_translator_transform: After transform: 1 modules, 0 connections
+Info: hps_io: "hps_0" instantiated altera_hps_io "hps_io"
+Info: border: "hps_io" instantiated altera_interface_generator "border"
+Info: HPS: Done HPS" with 5 modules, 45 files, 1237227 bytes
+Info: ip-generate succeeded.
+Info: Finished: Create HDL design files for synthesis

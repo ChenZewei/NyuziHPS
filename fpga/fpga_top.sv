@@ -50,7 +50,25 @@ module fpga_top(
 	inout [31:0]                dram_dq,    //Data Bus
 	*/
 	
-	//
+	//FPGA SDRAM Controller Interfaces
+	output[14:0]                DRAM_a,  //Address Bus A0-A14
+	output [2:0]                DRAM_ba,	 //Bank Address Bus BA 0 1 2
+	output                      DRAM_cas_n, //Colume Address Strobe
+	output                      DRAM_cke,   //Clock Enable
+	output                      DRAM_clk_p, //Differencial Output Clock
+	output                      DRAM_clk_n, //Differencial Output Clock
+	output                      DRAM_cs_n,  //Chip Select
+	output [3:0]                DRAM_dqm,   //Write Mask Byte Lane
+	inout [31:0]                DRAM_dq,    //Data Bus
+	inout [3:0]				   	 DRAM_dqs_p, //Data Strobe P Byte Lane 0-3
+	inout [3:0]				   	 DRAM_dqs_n, //Data Strobe N Byte Lane 0-3
+	output							 DRAM_odt,   //One-die Termination Enable
+	output                      DRAM_ras_n, //Raw Address Strobe
+	output							 DRAM_reset_n,//Reset
+	output                      DRAM_we_n,  //Write Enable
+	input 							 DRAM_rzq,  //ZQ Impedance Calibration
+	
+	//HPS SDRAM Controller Interfaces
 	output[14:0]                dram_a,  //Address Bus A0-A14
 	output [2:0]                dram_ba,	 //Bank Address Bus BA 0 1 2
 	output                      dram_cas_n, //Colume Address Strobe
@@ -64,7 +82,7 @@ module fpga_top(
 	inout [3:0]				   	 dram_dqs_n, //Data Strobe N Byte Lane 0-3
 	output							 dram_odt,   //One-die Termination Enable
 	output                      dram_ras_n, //Raw Address Strobe
-	output							 dram_resetn,//Reset
+	output							 dram_reset_n,//Reset
 	output                      dram_we_n,  //Write Enable
 	input 							 dram_rzq,  //ZQ Impedance Calibration
 	
@@ -90,7 +108,7 @@ module fpga_top(
 	inout                       ps2_data);
 
 	// We always access the full word width, so hard code these to active (low)
-	assign dram_dqm = 4'b0000;
+	assign DRAM_dqm = 4'b0000;
 
 	logic fb_base_update_en;
 	logic [31:0] fb_new_base;
@@ -111,6 +129,7 @@ module fpga_top(
 	axi4_interface axi_bus_m1();
 	axi4_interface axi_bus_s0();
 	axi4_interface axi_bus_s1();
+	axi4_interface axi_bus_s2();
 	logic reset;
 	wire[31:0] loader_addr;
 	wire[31:0] loader_data;
@@ -151,6 +170,7 @@ module fpga_top(
 					  .axi_bus_m1		(axi_bus_m1.master),
 					  .axi_bus_s0		(axi_bus_s0.slave),
 					  .axi_bus_s1		(axi_bus_s1.slave),
+					  .axi_bus_s2		(axi_bus_s2.slave),
 					  // Inputs
 					  .clk			(clk),
 					  .reset		(reset));
@@ -219,22 +239,22 @@ module fpga_top(
     fpga_sdram_controller u0 (
         .clk_clk                      (clk),                      //                  clk.clk
         .reset_reset_n                (reset),                //                reset.reset_n
-        .memory_mem_a                 (dram_a),                 //               memory.mem_a
-        .memory_mem_ba                (dram_ba),                //                     .mem_ba
-        .memory_mem_ck                (dram_clk_p),                //                     .mem_ck
-        .memory_mem_ck_n              (dram_clk_n),              //                     .mem_ck_n
-        .memory_mem_cke               (dram_cke),               //                     .mem_cke
-        .memory_mem_cs_n              (dram_cs_n),              //                     .mem_cs_n
+        .memory_mem_a                 (DRAM_a),                 //               memory.mem_a
+        .memory_mem_ba                (DRAM_ba),                //                     .mem_ba
+        .memory_mem_ck                (DRAM_clk_p),                //                     .mem_ck
+        .memory_mem_ck_n              (DRAM_clk_n),              //                     .mem_ck_n
+        .memory_mem_cke               (DRAM_cke),               //                     .mem_cke
+        .memory_mem_cs_n              (DRAM_cs_n),              //                     .mem_cs_n
         .memory_mem_dm                (),                //                     .mem_dm
-        .memory_mem_ras_n             (dram_ras_n),             //                     .mem_ras_n
-        .memory_mem_cas_n             (dram_cas_n),             //                     .mem_cas_n
-        .memory_mem_we_n              (dram_we_n),              //                     .mem_we_n
-        .memory_mem_reset_n           (),           //                     .mem_reset_n
-        .memory_mem_dq                (dram_dq),                //                     .mem_dq
-        .memory_mem_dqs               (dram_dqs_p),               //                     .mem_dqs
-        .memory_mem_dqs_n             (dram_dqs_n),             //                     .mem_dqs_n
-        .memory_mem_odt               (dram_odt),               //                     .mem_odt
-        .oct_rzqin                    (dram_rzq),                    //                  oct.rzqin
+        .memory_mem_ras_n             (DRAM_ras_n),             //                     .mem_ras_n
+        .memory_mem_cas_n             (DRAM_cas_n),             //                     .mem_cas_n
+        .memory_mem_we_n              (DRAM_we_n),              //                     .mem_we_n
+        .memory_mem_reset_n           (DRAM_reset_n),           //                     .mem_reset_n
+        .memory_mem_dq                (DRAM_dq),                //                     .mem_dq
+        .memory_mem_dqs               (DRAM_dqs_p),               //                     .mem_dqs
+        .memory_mem_dqs_n             (DRAM_dqs_n),             //                     .mem_dqs_n
+        .memory_mem_odt               (DRAM_odt),               //                     .mem_odt
+        .oct_rzqin                    (DRAM_rzq),                    //                  oct.rzqin
         .axi_translator_slave_awid    (),    // axi_translator_slave.awid
         .axi_translator_slave_awaddr  (axi_bus_m0.slave.m_awaddr),  //                     .awaddr
         .axi_translator_slave_awlen   (axi_bus_m0.slave.m_awlen),   //                     .awlen
@@ -272,9 +292,66 @@ module fpga_top(
         .axi_translator_slave_rvalid  (axi_bus_m0.slave.s_rvalid),  //                     .rvalid
         .axi_translator_slave_rready  (axi_bus_m0.slave.m_rready)   //                     .rready
     );
+	 	 
+    HPS u1 (
+        .clk_clk            (clk),            //        clk.clk
+        .reset_reset_n      (reset),      //      reset.reset_n
+        .memory_mem_a       (dram_a),       //     memory.mem_a
+        .memory_mem_ba      (dram_ba),      //           .mem_ba
+        .memory_mem_ck      (dram_clk_p),      //         .mem_ck
+        .memory_mem_ck_n    (dram_clk_n),    //           .mem_ck_n
+        .memory_mem_cke     (dram_cke),     //           .mem_cke
+        .memory_mem_cs_n    (dram_cs_n),    //           .mem_cs_n
+        .memory_mem_ras_n   (dram_ras_n),   //           .mem_ras_n
+        .memory_mem_cas_n   (dram_cas_n),   //           .mem_cas_n
+        .memory_mem_we_n    (dram_we_n),    //           .mem_we_n
+        .memory_mem_reset_n (dram_reset_n), //           .mem_reset_n
+        .memory_mem_dq      (dram_dq),      //           .mem_dq
+        .memory_mem_dqs     (dram_dqs_p),     //           .mem_dqs
+        .memory_mem_dqs_n   (dram_dqs_n),   //           .mem_dqs_n
+        .memory_mem_odt     (dram_odt),     //           .mem_odt
+        .memory_mem_dm      (dram_dqm),      //           .mem_dm
+        .memory_oct_rzqin   (dram_rzq),   //           .oct_rzqin
+        .axi_master_awid    (),    // axi_master.awid
+        .axi_master_awaddr  (axi_bus_s1.master.m_awaddr),  //           .awaddr
+        .axi_master_awlen   (axi_bus_s1.master.m_awlen),   //           .awlen
+        .axi_master_awsize  (axi_bus_s1.master.m_awsize),  //           .awsize
+        .axi_master_awburst (axi_bus_s1.master.m_awburst), //           .awburst
+        .axi_master_awlock  (),  //           .awlock
+        .axi_master_awcache (axi_bus_s1.master.m_awcache), //           .awcache
+        .axi_master_awprot  (),  //           .awprot
+        .axi_master_awvalid (axi_bus_s1.master.m_awvalid), //           .awvalid
+        .axi_master_awready (axi_bus_s1.master.s_awready), //           .awready
+        .axi_master_wid     (),     //           .wid
+        .axi_master_wdata   (axi_bus_s1.master.m_wdata),   //           .wdata
+        .axi_master_wstrb   (axi_bus_s1.master.m_wstrb),   //           .wstrb
+        .axi_master_wlast   (axi_bus_s1.master.m_wlast),   //           .wlast
+        .axi_master_wvalid  (axi_bus_s1.master.m_wvalid),  //           .wvalid
+        .axi_master_wready  (axi_bus_s1.master.s_wready),  //           .wready
+        .axi_master_bid     (),     //           .bid
+        .axi_master_bresp   (),   //           .bresp
+        .axi_master_bvalid  (axi_bus_s1.master.s_bvalid),  //           .bvalid
+        .axi_master_bready  (axi_bus_s1.master.m_bready),  //           .bready
+        .axi_master_arid    (),    //           .arid
+        .axi_master_araddr  (axi_bus_s1.master.m_araddr),  //           .araddr
+        .axi_master_arlen   (axi_bus_s1.master.m_arlen),   //           .arlen
+        .axi_master_arsize  (axi_bus_s1.master.m_arsize),  //           .arsize
+        .axi_master_arburst (axi_bus_s1.master.m_arburst), //           .arburst
+        .axi_master_arlock  (),  //           .arlock
+        .axi_master_arcache (axi_bus_s1.master.m_arcache), //           .arcache
+        .axi_master_arprot  (),  //           .arprot
+        .axi_master_arvalid (axi_bus_s1.master.m_arvalid), //           .arvalid
+        .axi_master_arready (axi_bus_s1.master.s_arready), //           .arready
+        .axi_master_rid     (),     //           .rid
+        .axi_master_rdata   (axi_bus_s1.master.s_rdata),   //           .rdata
+        .axi_master_rresp   (),   //           .rresp
+        .axi_master_rlast   (),   //           .rlast
+        .axi_master_rvalid  (axi_bus_s1.master.s_rvalid),  //           .rvalid
+        .axi_master_rready  (axi_bus_s1.master.m_rready)   //           .rready
+    );
 
 	vga_controller vga_controller(
-	      .axi_bus(axi_bus_s1.master),
+	      .axi_bus(axi_bus_s2.master),
 		  .*);
 
 `ifdef DEBUG_TRACE

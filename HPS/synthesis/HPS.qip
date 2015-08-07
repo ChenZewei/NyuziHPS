@@ -1,0 +1,82 @@
+set_global_assignment -entity "HPS" -library "HPS" -name IP_TOOL_NAME "Qsys"
+set_global_assignment -entity "HPS" -library "HPS" -name IP_TOOL_VERSION "13.0sp1"
+set_global_assignment -entity "HPS" -library "HPS" -name IP_TOOL_ENV "Qsys"
+set_global_assignment -library "HPS" -name SOPCINFO_FILE [file join $::quartus(qip_path) "../../HPS.sopcinfo"]
+set_instance_assignment -entity "HPS" -library "HPS" -name SLD_INFO "QSYS_NAME HPS HAS_SOPCINFO 1 GENERATION_ID 1438953505"
+set_global_assignment -library "HPS" -name MISC_FILE [file join $::quartus(qip_path) "../../HPS.cmp"]
+set_global_assignment -name SYNTHESIS_ONLY_QIP ON
+set_global_assignment -library "HPS" -name MISC_FILE [file join $::quartus(qip_path) "../../HPS.qsys"]
+set_instance_assignment -name hps_partition on -entity HPS_hps_0_hps_io_border -library HPS
+set_instance_assignment -name HPS_LOCATION HPSINTERFACECLOCKSRESETS_X52_Y78_N111 -entity HPS_hps_0_fpga_interfaces -to clocks_resets
+set_instance_assignment -name HPS_LOCATION HPSINTERFACEDBGAPB_X52_Y80_N111 -entity HPS_hps_0_fpga_interfaces -to debug_apb
+set_instance_assignment -name HPS_LOCATION HPSINTERFACETPIUTRACE_X52_Y39_N111 -entity HPS_hps_0_fpga_interfaces -to tpiu
+set_instance_assignment -name HPS_LOCATION HPSINTERFACEBOOTFROMFPGA_X52_Y74_N111 -entity HPS_hps_0_fpga_interfaces -to boot_from_fpga
+set_instance_assignment -name HPS_LOCATION HPSINTERFACEFPGA2HPS_X52_Y45_N111 -entity HPS_hps_0_fpga_interfaces -to fpga2hps
+set_instance_assignment -name HPS_LOCATION HPSINTERFACEHPS2FPGA_X52_Y47_N111 -entity HPS_hps_0_fpga_interfaces -to hps2fpga
+set_instance_assignment -name HPS_LOCATION HPSINTERFACEFPGA2SDRAM_X52_Y53_N111 -entity HPS_hps_0_fpga_interfaces -to f2sdram
+
+set_global_assignment -library "HPS" -name VERILOG_FILE [file join $::quartus(qip_path) "HPS.v"]
+set_global_assignment -library "HPS" -name VERILOG_FILE [file join $::quartus(qip_path) "submodules/HPS_hps_0.v"]
+set_global_assignment -library "HPS" -name VERILOG_FILE [file join $::quartus(qip_path) "submodules/HPS_hps_0_hps_io.v"]
+set_global_assignment -library "HPS" -name VERILOG_FILE [file join $::quartus(qip_path) "submodules/hps_sdram.v"]
+set_global_assignment -library "HPS" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "submodules/altdq_dqs2_acv_connect_to_hard_phy_cyclonev.sv"]
+set_global_assignment -library "HPS" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "submodules/altera_mem_if_dll_cyclonev.sv"]
+set_global_assignment -library "HPS" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "submodules/altera_mem_if_hard_memory_controller_top_cyclonev.sv"]
+set_global_assignment -library "HPS" -name VERILOG_FILE [file join $::quartus(qip_path) "submodules/altera_mem_if_hhp_qseq_synth_top.v"]
+set_global_assignment -library "HPS" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "submodules/altera_mem_if_oct_cyclonev.sv"]
+set_global_assignment -library "HPS" -name SOURCE_FILE [file join $::quartus(qip_path) "submodules/hps_sdram_p0.ppf"]
+set_global_assignment -library "HPS" -name SDC_FILE [file join $::quartus(qip_path) "submodules/hps_sdram_p0.sdc"]
+set_global_assignment -library "HPS" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "submodules/hps_sdram_p0.sv"]
+set_global_assignment -library "HPS" -name VERILOG_FILE [file join $::quartus(qip_path) "submodules/hps_sdram_p0_acv_hard_addr_cmd_pads.v"]
+set_global_assignment -library "HPS" -name VERILOG_FILE [file join $::quartus(qip_path) "submodules/hps_sdram_p0_acv_hard_io_pads.v"]
+set_global_assignment -library "HPS" -name VERILOG_FILE [file join $::quartus(qip_path) "submodules/hps_sdram_p0_acv_hard_memphy.v"]
+set_global_assignment -library "HPS" -name VERILOG_FILE [file join $::quartus(qip_path) "submodules/hps_sdram_p0_acv_ldc.v"]
+set_global_assignment -library "HPS" -name VERILOG_FILE [file join $::quartus(qip_path) "submodules/hps_sdram_p0_altdqdqs.v"]
+set_global_assignment -library "HPS" -name VERILOG_FILE [file join $::quartus(qip_path) "submodules/hps_sdram_p0_clock_pair_generator.v"]
+set_global_assignment -library "HPS" -name VERILOG_FILE [file join $::quartus(qip_path) "submodules/hps_sdram_p0_generic_ddio.v"]
+set_global_assignment -library "HPS" -name VERILOG_FILE [file join $::quartus(qip_path) "submodules/hps_sdram_p0_iss_probe.v"]
+set_global_assignment -library "HPS" -name TCL_FILE [file join $::quartus(qip_path) "submodules/hps_sdram_p0_parameters.tcl"]
+set_global_assignment -library "HPS" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "submodules/hps_sdram_p0_phy_csr.sv"]
+set_global_assignment -library "HPS" -name TCL_FILE [file join $::quartus(qip_path) "submodules/hps_sdram_p0_pin_assignments.tcl"]
+set_global_assignment -library "HPS" -name TCL_FILE [file join $::quartus(qip_path) "submodules/hps_sdram_p0_pin_map.tcl"]
+set_global_assignment -library "HPS" -name TCL_FILE [file join $::quartus(qip_path) "submodules/hps_sdram_p0_report_timing.tcl"]
+set_global_assignment -library "HPS" -name TCL_FILE [file join $::quartus(qip_path) "submodules/hps_sdram_p0_report_timing_core.tcl"]
+set_global_assignment -library "HPS" -name VERILOG_FILE [file join $::quartus(qip_path) "submodules/hps_sdram_p0_reset.v"]
+set_global_assignment -library "HPS" -name VERILOG_FILE [file join $::quartus(qip_path) "submodules/hps_sdram_p0_reset_sync.v"]
+set_global_assignment -library "HPS" -name TCL_FILE [file join $::quartus(qip_path) "submodules/hps_sdram_p0_timing.tcl"]
+set_global_assignment -library "HPS" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "submodules/hps_sdram_pll.sv"]
+set_instance_assignment -entity "HPS_hps_0_hps_io_border" -library "HPS" -name HPS_ISW_FILE [file join $::quartus(qip_path) "submodules/sequencer/alt_types.pre.h"]
+set_global_assignment -library "HPS" -name MISC_FILE [file join $::quartus(qip_path) "submodules/sequencer/alt_types.pre.h"]
+set_instance_assignment -entity "HPS_hps_0_hps_io_border" -library "HPS" -name HPS_ISW_FILE [file join $::quartus(qip_path) "submodules/sequencer/emif.pre.xml"]
+set_global_assignment -library "HPS" -name MISC_FILE [file join $::quartus(qip_path) "submodules/sequencer/emif.pre.xml"]
+set_instance_assignment -entity "HPS_hps_0_hps_io_border" -library "HPS" -name HPS_ISW_FILE [file join $::quartus(qip_path) "submodules/sequencer/sdram_io.pre.h"]
+set_global_assignment -library "HPS" -name MISC_FILE [file join $::quartus(qip_path) "submodules/sequencer/sdram_io.pre.h"]
+set_instance_assignment -entity "HPS_hps_0_hps_io_border" -library "HPS" -name HPS_ISW_FILE [file join $::quartus(qip_path) "submodules/sequencer/sequencer.pre.c"]
+set_global_assignment -library "HPS" -name MISC_FILE [file join $::quartus(qip_path) "submodules/sequencer/sequencer.pre.c"]
+set_instance_assignment -entity "HPS_hps_0_hps_io_border" -library "HPS" -name HPS_ISW_FILE [file join $::quartus(qip_path) "submodules/sequencer/sequencer.pre.h"]
+set_global_assignment -library "HPS" -name MISC_FILE [file join $::quartus(qip_path) "submodules/sequencer/sequencer.pre.h"]
+set_instance_assignment -entity "HPS_hps_0_hps_io_border" -library "HPS" -name HPS_ISW_FILE [file join $::quartus(qip_path) "submodules/sequencer/sequencer_auto.pre.h"]
+set_global_assignment -library "HPS" -name MISC_FILE [file join $::quartus(qip_path) "submodules/sequencer/sequencer_auto.pre.h"]
+set_instance_assignment -entity "HPS_hps_0_hps_io_border" -library "HPS" -name HPS_ISW_FILE [file join $::quartus(qip_path) "submodules/sequencer/sequencer_auto_ac_init.pre.c"]
+set_global_assignment -library "HPS" -name MISC_FILE [file join $::quartus(qip_path) "submodules/sequencer/sequencer_auto_ac_init.pre.c"]
+set_instance_assignment -entity "HPS_hps_0_hps_io_border" -library "HPS" -name HPS_ISW_FILE [file join $::quartus(qip_path) "submodules/sequencer/sequencer_auto_inst_init.pre.c"]
+set_global_assignment -library "HPS" -name MISC_FILE [file join $::quartus(qip_path) "submodules/sequencer/sequencer_auto_inst_init.pre.c"]
+set_instance_assignment -entity "HPS_hps_0_hps_io_border" -library "HPS" -name HPS_ISW_FILE [file join $::quartus(qip_path) "submodules/sequencer/sequencer_defines.pre.h"]
+set_global_assignment -library "HPS" -name MISC_FILE [file join $::quartus(qip_path) "submodules/sequencer/sequencer_defines.pre.h"]
+set_instance_assignment -entity "HPS_hps_0_hps_io_border" -library "HPS" -name HPS_ISW_FILE [file join $::quartus(qip_path) "submodules/sequencer/system.pre.h"]
+set_global_assignment -library "HPS" -name MISC_FILE [file join $::quartus(qip_path) "submodules/sequencer/system.pre.h"]
+set_instance_assignment -entity "HPS_hps_0_hps_io_border" -library "HPS" -name HPS_ISW_FILE [file join $::quartus(qip_path) "submodules/sequencer/tclrpt.pre.c"]
+set_global_assignment -library "HPS" -name MISC_FILE [file join $::quartus(qip_path) "submodules/sequencer/tclrpt.pre.c"]
+set_instance_assignment -entity "HPS_hps_0_hps_io_border" -library "HPS" -name HPS_ISW_FILE [file join $::quartus(qip_path) "submodules/sequencer/tclrpt.pre.h"]
+set_global_assignment -library "HPS" -name MISC_FILE [file join $::quartus(qip_path) "submodules/sequencer/tclrpt.pre.h"]
+set_global_assignment -library "HPS" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "submodules/HPS_hps_0_hps_io_border.sv"]
+set_instance_assignment -entity "HPS_hps_0_hps_io_border" -library "HPS" -name HPS_ISW_FILE [file join $::quartus(qip_path) "submodules/hps.pre.xml"]
+set_global_assignment -library "HPS" -name MISC_FILE [file join $::quartus(qip_path) "submodules/hps.pre.xml"]
+set_global_assignment -library "HPS" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "submodules/HPS_hps_0_fpga_interfaces.sv"]
+
+set_global_assignment -entity "HPS_hps_0" -library "HPS" -name IP_TOOL_NAME "altera_hps"
+set_global_assignment -entity "HPS_hps_0" -library "HPS" -name IP_TOOL_VERSION "13.0sp1"
+set_global_assignment -entity "HPS_hps_0" -library "HPS" -name IP_TOOL_ENV "Qsys"
+set_global_assignment -entity "HPS_hps_0_hps_io" -library "HPS" -name IP_TOOL_NAME "altera_hps_io"
+set_global_assignment -entity "HPS_hps_0_hps_io" -library "HPS" -name IP_TOOL_VERSION "13.0sp1"
+set_global_assignment -entity "HPS_hps_0_hps_io" -library "HPS" -name IP_TOOL_ENV "Qsys"

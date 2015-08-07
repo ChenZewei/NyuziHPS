@@ -1,5 +1,5 @@
 Flow report for NyuziHPS
-Fri Aug 07 12:01:44 2015
+Fri Aug 07 22:39:16 2015
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Full Version
 
 
@@ -40,7 +40,7 @@ applicable agreement for further details.
 +----------------------------------------------------------------------------------------+
 ; Flow Summary                                                                           ;
 +-------------------------------------+--------------------------------------------------+
-; Flow Status                         ; Successful - Fri Aug 07 12:01:42 2015            ;
+; Flow Status                         ; Successful - Fri Aug 07 22:39:13 2015            ;
 ; Quartus II 64-Bit Version           ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Full Version ;
 ; Revision Name                       ; NyuziHPS                                         ;
 ; Top-level Entity Name               ; fpga_top                                         ;
@@ -48,8 +48,8 @@ applicable agreement for further details.
 ; Device                              ; 5CSXFC6D6F31C8ES                                 ;
 ; Timing Models                       ; Preliminary                                      ;
 ; Logic utilization (in ALMs)         ; N/A                                              ;
-; Total registers                     ; 30413                                            ;
-; Total pins                          ; 168                                              ;
+; Total registers                     ; 30498                                            ;
+; Total pins                          ; 240                                              ;
 ; Total virtual pins                  ; 0                                                ;
 ; Total block memory bits             ; 1,758,391                                        ;
 ; Total DSP Blocks                    ; 88                                               ;
@@ -60,7 +60,7 @@ applicable agreement for further details.
 ; Total HSSI PMA TX Serializers       ; 0                                                ;
 ; Total HSSI PMA TX ATT Serializers   ; 0                                                ;
 ; Total PLLs                          ; 1                                                ;
-; Total DLLs                          ; 1                                                ;
+; Total DLLs                          ; 2                                                ;
 +-------------------------------------+--------------------------------------------------+
 
 
@@ -69,7 +69,7 @@ applicable agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 08/07/2015 11:55:04 ;
+; Start date & time ; 08/07/2015 22:30:41 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; NyuziHPS            ;
 +-------------------+---------------------+
@@ -80,7 +80,24 @@ applicable agreement for further details.
 +-------------------------------------+-------------------------------------------------------------------------+---------------+--------------------------------------------------------------+------------+
 ; Assignment Name                     ; Value                                                                   ; Default Value ; Entity Name                                                  ; Section Id ;
 +-------------------------------------+-------------------------------------------------------------------------+---------------+--------------------------------------------------------------+------------+
-; COMPILER_SIGNATURE_ID               ; 1095787358946.143891970407604                                           ; --            ; --                                                           ; --         ;
+; COMPILER_SIGNATURE_ID               ; 13795399191685.143895784008648                                          ; --            ; --                                                           ; --         ;
+; HPS_ISW_FILE                        ; HPS/synthesis/submodules/sequencer/alt_types.pre.h                      ; --            ; HPS_hps_0_hps_io_border                                      ; --         ;
+; HPS_ISW_FILE                        ; HPS/synthesis/submodules/sequencer/emif.pre.xml                         ; --            ; HPS_hps_0_hps_io_border                                      ; --         ;
+; HPS_ISW_FILE                        ; HPS/synthesis/submodules/sequencer/sdram_io.pre.h                       ; --            ; HPS_hps_0_hps_io_border                                      ; --         ;
+; HPS_ISW_FILE                        ; HPS/synthesis/submodules/sequencer/sequencer.pre.c                      ; --            ; HPS_hps_0_hps_io_border                                      ; --         ;
+; HPS_ISW_FILE                        ; HPS/synthesis/submodules/sequencer/sequencer.pre.h                      ; --            ; HPS_hps_0_hps_io_border                                      ; --         ;
+; HPS_ISW_FILE                        ; HPS/synthesis/submodules/sequencer/sequencer_auto.pre.h                 ; --            ; HPS_hps_0_hps_io_border                                      ; --         ;
+; HPS_ISW_FILE                        ; HPS/synthesis/submodules/sequencer/sequencer_auto_ac_init.pre.c         ; --            ; HPS_hps_0_hps_io_border                                      ; --         ;
+; HPS_ISW_FILE                        ; HPS/synthesis/submodules/sequencer/sequencer_auto_inst_init.pre.c       ; --            ; HPS_hps_0_hps_io_border                                      ; --         ;
+; HPS_ISW_FILE                        ; HPS/synthesis/submodules/sequencer/sequencer_defines.pre.h              ; --            ; HPS_hps_0_hps_io_border                                      ; --         ;
+; HPS_ISW_FILE                        ; HPS/synthesis/submodules/sequencer/system.pre.h                         ; --            ; HPS_hps_0_hps_io_border                                      ; --         ;
+; HPS_ISW_FILE                        ; HPS/synthesis/submodules/sequencer/tclrpt.pre.c                         ; --            ; HPS_hps_0_hps_io_border                                      ; --         ;
+; HPS_ISW_FILE                        ; HPS/synthesis/submodules/sequencer/tclrpt.pre.h                         ; --            ; HPS_hps_0_hps_io_border                                      ; --         ;
+; HPS_ISW_FILE                        ; HPS/synthesis/submodules/hps.pre.xml                                    ; --            ; HPS_hps_0_hps_io_border                                      ; --         ;
+; HPS_PARTITION                       ; On                                                                      ; --            ; HPS_hps_0_hps_io_border                                      ; --         ;
+; IP_TOOL_ENV                         ; Qsys                                                                    ; --            ; HPS                                                          ; --         ;
+; IP_TOOL_ENV                         ; Qsys                                                                    ; --            ; HPS_hps_0                                                    ; --         ;
+; IP_TOOL_ENV                         ; Qsys                                                                    ; --            ; HPS_hps_0_hps_io                                             ; --         ;
 ; IP_TOOL_ENV                         ; Qsys                                                                    ; --            ; afi_mux_ddr3_ddrx                                            ; --         ;
 ; IP_TOOL_ENV                         ; Qsys                                                                    ; --            ; alt_mem_ddrx_mm_st_converter                                 ; --         ;
 ; IP_TOOL_ENV                         ; Qsys                                                                    ; --            ; alt_mem_if_nextgen_ddr3_controller_core                      ; --         ;
@@ -113,6 +130,9 @@ applicable agreement for further details.
 ; IP_TOOL_ENV                         ; Qsys                                                                    ; --            ; fpga_sdram_controller_mem_if_ddr3_emif_0_pll0                ; --         ;
 ; IP_TOOL_ENV                         ; Qsys                                                                    ; --            ; fpga_sdram_controller_mem_if_ddr3_emif_0_s0                  ; --         ;
 ; IP_TOOL_ENV                         ; Qsys                                                                    ; --            ; fpga_sdram_controller_rsp_xbar_demux                         ; --         ;
+; IP_TOOL_NAME                        ; Qsys                                                                    ; --            ; HPS                                                          ; --         ;
+; IP_TOOL_NAME                        ; altera_hps                                                              ; --            ; HPS_hps_0                                                    ; --         ;
+; IP_TOOL_NAME                        ; altera_hps_io                                                           ; --            ; HPS_hps_0_hps_io                                             ; --         ;
 ; IP_TOOL_NAME                        ; altera_mem_if_ddr3_afi_mux                                              ; --            ; afi_mux_ddr3_ddrx                                            ; --         ;
 ; IP_TOOL_NAME                        ; alt_mem_ddrx_mm_st_converter                                            ; --            ; alt_mem_ddrx_mm_st_converter                                 ; --         ;
 ; IP_TOOL_NAME                        ; altera_mem_if_nextgen_ddr3_controller_core                              ; --            ; alt_mem_if_nextgen_ddr3_controller_core                      ; --         ;
@@ -145,6 +165,9 @@ applicable agreement for further details.
 ; IP_TOOL_NAME                        ; altera_mem_if_ddr3_pll                                                  ; --            ; fpga_sdram_controller_mem_if_ddr3_emif_0_pll0                ; --         ;
 ; IP_TOOL_NAME                        ; altera_mem_if_ddr3_qseq                                                 ; --            ; fpga_sdram_controller_mem_if_ddr3_emif_0_s0                  ; --         ;
 ; IP_TOOL_NAME                        ; altera_merlin_demultiplexer                                             ; --            ; fpga_sdram_controller_rsp_xbar_demux                         ; --         ;
+; IP_TOOL_VERSION                     ; 13.0sp1                                                                 ; --            ; HPS                                                          ; --         ;
+; IP_TOOL_VERSION                     ; 13.0sp1                                                                 ; --            ; HPS_hps_0                                                    ; --         ;
+; IP_TOOL_VERSION                     ; 13.0sp1                                                                 ; --            ; HPS_hps_0_hps_io                                             ; --         ;
 ; IP_TOOL_VERSION                     ; 13.0                                                                    ; --            ; afi_mux_ddr3_ddrx                                            ; --         ;
 ; IP_TOOL_VERSION                     ; 13.0                                                                    ; --            ; alt_mem_ddrx_mm_st_converter                                 ; --         ;
 ; IP_TOOL_VERSION                     ; 13.0                                                                    ; --            ; alt_mem_if_nextgen_ddr3_controller_core                      ; --         ;
@@ -179,6 +202,21 @@ applicable agreement for further details.
 ; IP_TOOL_VERSION                     ; 13.0                                                                    ; --            ; fpga_sdram_controller_rsp_xbar_demux                         ; --         ;
 ; MAX_CORE_JUNCTION_TEMP              ; 85                                                                      ; --            ; --                                                           ; --         ;
 ; MIN_CORE_JUNCTION_TEMP              ; 0                                                                       ; --            ; --                                                           ; --         ;
+; MISC_FILE                           ; HPS/synthesis/../../HPS.cmp                                             ; --            ; --                                                           ; --         ;
+; MISC_FILE                           ; HPS/synthesis/../../HPS.qsys                                            ; --            ; --                                                           ; --         ;
+; MISC_FILE                           ; HPS/synthesis/submodules/sequencer/alt_types.pre.h                      ; --            ; --                                                           ; --         ;
+; MISC_FILE                           ; HPS/synthesis/submodules/sequencer/emif.pre.xml                         ; --            ; --                                                           ; --         ;
+; MISC_FILE                           ; HPS/synthesis/submodules/sequencer/sdram_io.pre.h                       ; --            ; --                                                           ; --         ;
+; MISC_FILE                           ; HPS/synthesis/submodules/sequencer/sequencer.pre.c                      ; --            ; --                                                           ; --         ;
+; MISC_FILE                           ; HPS/synthesis/submodules/sequencer/sequencer.pre.h                      ; --            ; --                                                           ; --         ;
+; MISC_FILE                           ; HPS/synthesis/submodules/sequencer/sequencer_auto.pre.h                 ; --            ; --                                                           ; --         ;
+; MISC_FILE                           ; HPS/synthesis/submodules/sequencer/sequencer_auto_ac_init.pre.c         ; --            ; --                                                           ; --         ;
+; MISC_FILE                           ; HPS/synthesis/submodules/sequencer/sequencer_auto_inst_init.pre.c       ; --            ; --                                                           ; --         ;
+; MISC_FILE                           ; HPS/synthesis/submodules/sequencer/sequencer_defines.pre.h              ; --            ; --                                                           ; --         ;
+; MISC_FILE                           ; HPS/synthesis/submodules/sequencer/system.pre.h                         ; --            ; --                                                           ; --         ;
+; MISC_FILE                           ; HPS/synthesis/submodules/sequencer/tclrpt.pre.c                         ; --            ; --                                                           ; --         ;
+; MISC_FILE                           ; HPS/synthesis/submodules/sequencer/tclrpt.pre.h                         ; --            ; --                                                           ; --         ;
+; MISC_FILE                           ; HPS/synthesis/submodules/hps.pre.xml                                    ; --            ; --                                                           ; --         ;
 ; MISC_FILE                           ; fpga_sdram_controller/synthesis/../../fpga_sdram_controller.cmp         ; --            ; --                                                           ; --         ;
 ; MISC_FILE                           ; fpga_sdram_controller/synthesis/../../fpga_sdram_controller.qsys        ; --            ; --                                                           ; --         ;
 ; MISC_FILE                           ; fpga_sdram_controller/synthesis/submodules/alt_mem_ddrx_define.iv       ; --            ; --                                                           ; --         ;
@@ -188,9 +226,12 @@ applicable agreement for further details.
 ; POWER_BOARD_THERMAL_MODEL           ; None (CONSERVATIVE)                                                     ; --            ; --                                                           ; --         ;
 ; POWER_PRESET_COOLING_SOLUTION       ; 23 MM HEAT SINK WITH 200 LFPM AIRFLOW                                   ; --            ; --                                                           ; --         ;
 ; PROJECT_OUTPUT_DIRECTORY            ; output_files                                                            ; --            ; --                                                           ; --         ;
-; SEARCH_PATH                         ; c:\users\administrator\documents\quartus ii\nyuzihps\core               ; --            ; --                                                           ; --         ;
+; SEARCH_PATH                         ; .\core                                                                  ; --            ; --                                                           ; --         ;
+; SLD_INFO                            ; QSYS_NAME HPS HAS_SOPCINFO 1 GENERATION_ID 1438953505                   ; --            ; HPS                                                          ; --         ;
 ; SLD_INFO                            ; QSYS_NAME fpga_sdram_controller HAS_SOPCINFO 1 GENERATION_ID 1438912171 ; --            ; fpga_sdram_controller                                        ; --         ;
+; SOPCINFO_FILE                       ; HPS/synthesis/../../HPS.sopcinfo                                        ; --            ; --                                                           ; --         ;
 ; SOPCINFO_FILE                       ; fpga_sdram_controller/synthesis/../../fpga_sdram_controller.sopcinfo    ; --            ; --                                                           ; --         ;
+; SYNTHESIS_ONLY_QIP                  ; On                                                                      ; --            ; --                                                           ; --         ;
 ; SYNTHESIS_ONLY_QIP                  ; On                                                                      ; --            ; --                                                           ; --         ;
 ; TOP_LEVEL_ENTITY                    ; fpga_top                                                                ; NyuziHPS      ; --                                                           ; --         ;
 ; VERILOG_INPUT_VERSION               ; SystemVerilog_2005                                                      ; Verilog_2001  ; --                                                           ; --         ;
@@ -204,8 +245,8 @@ applicable agreement for further details.
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name          ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis ; 00:06:20     ; 1.0                     ; 1558 MB             ; 00:06:18                           ;
-; Total                ; 00:06:20     ; --                      ; --                  ; 00:06:18                           ;
+; Analysis & Synthesis ; 00:08:09     ; 1.0                     ; 1608 MB             ; 00:08:01                           ;
+; Total                ; 00:08:09     ; --                      ; --                  ; 00:08:01                           ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 
@@ -214,7 +255,7 @@ applicable agreement for further details.
 +----------------------+------------------+-----------+------------+----------------+
 ; Module Name          ; Machine Hostname ; OS Name   ; OS Version ; Processor type ;
 +----------------------+------------------+-----------+------------+----------------+
-; Analysis & Synthesis ; CL-20150204PRIF  ; Windows 7 ; 6.1        ; x86_64         ;
+; Analysis & Synthesis ; Viago-PC         ; Windows 7 ; 6.2        ; x86_64         ;
 +----------------------+------------------+-----------+------------+----------------+
 
 

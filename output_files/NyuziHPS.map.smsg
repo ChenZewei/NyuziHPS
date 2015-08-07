@@ -127,3 +127,19 @@ Info (10281): Verilog HDL Declaration information at rw_manager_core.sv(71): obj
 Warning (10268): Verilog HDL information at sequencer_phy_mgr.sv(398): always construct contains both blocking and non-blocking assignments
 Info (10281): Verilog HDL Declaration information at vga_timing_generator.sv(49): object "HVISIBLE_END" differs only in case from object "hvisible_end" in the same scope
 Info (10281): Verilog HDL Declaration information at vga_timing_generator.sv(53): object "VVISIBLE_END" differs only in case from object "vvisible_end" in the same scope
+Info (10281): Verilog HDL Declaration information at fpga_top.sv(54): object "DRAM_a" differs only in case from object "dram_a" in the same scope
+Info (10281): Verilog HDL Declaration information at fpga_top.sv(55): object "DRAM_ba" differs only in case from object "dram_ba" in the same scope
+Info (10281): Verilog HDL Declaration information at fpga_top.sv(56): object "DRAM_cas_n" differs only in case from object "dram_cas_n" in the same scope
+Info (10281): Verilog HDL Declaration information at fpga_top.sv(57): object "DRAM_cke" differs only in case from object "dram_cke" in the same scope
+Info (10281): Verilog HDL Declaration information at fpga_top.sv(58): object "DRAM_clk_p" differs only in case from object "dram_clk_p" in the same scope
+Info (10281): Verilog HDL Declaration information at fpga_top.sv(59): object "DRAM_clk_n" differs only in case from object "dram_clk_n" in the same scope
+Info (10281): Verilog HDL Declaration information at fpga_top.sv(60): object "DRAM_cs_n" differs only in case from object "dram_cs_n" in the same scope
+Info (10281): Verilog HDL Declaration information at fpga_top.sv(61): object "DRAM_dqm" differs only in case from object "dram_dqm" in the same scope
+Info (10281): Verilog HDL Declaration information at fpga_top.sv(62): object "DRAM_dq" differs only in case from object "dram_dq" in the same scope
+Info (10281): Verilog HDL Declaration information at fpga_top.sv(63): object "DRAM_dqs_p" differs only in case from object "dram_dqs_p" in the same scope
+Info (10281): Verilog HDL Declaration information at fpga_top.sv(64): object "DRAM_dqs_n" differs only in case from object "dram_dqs_n" in the same scope
+Info (10281): Verilog HDL Declaration information at fpga_top.sv(65): object "DRAM_odt" differs only in case from object "dram_odt" in the same scope
+Info (10281): Verilog HDL Declaration information at fpga_top.sv(66): object "DRAM_ras_n" differs only in case from object "dram_ras_n" in the same scope
+Info (10281): Verilog HDL Declaration information at fpga_top.sv(67): object "DRAM_reset_n" differs only in case from object "dram_reset_n" in the same scope
+Info (10281): Verilog HDL Declaration information at fpga_top.sv(68): object "DRAM_we_n" differs only in case from object "dram_we_n" in the same scope
+Info (10281): Verilog HDL Declaration information at fpga_top.sv(69): object "DRAM_rzq" differs only in case from object "dram_rzq" in the same scope

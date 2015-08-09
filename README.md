@@ -6,7 +6,7 @@ Implementation of the connection of NyuziProcesser(FPGA), SDRAM controller and A
 ##Project Configuration
 Assignments->Settings->Libraries add project library ./core  
 Assignments->Settings->Analysis&Synthesis Settings->Verilog HDL Input add macro VENDRO_ALTERA which setting is "1"  
-Run Tcl scripts before Filter(Place & Route) *_pin_assignments.tcl and *_timing.tcl for both HPS and FPGA_SDRAM_Controller  
+Run Tcl scripts, which named *_pin_assignments.tcl and *_timing.tcl for both HPS and FPGA_SDRAM_Controller, before Filter(Place & Route)   
 
 ##SDRAM Configurations
 configurations for both HPS and FPGA SDRAMs  

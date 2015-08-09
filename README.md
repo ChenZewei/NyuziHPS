@@ -2,6 +2,7 @@ NyuziHPS
 ========
 ##NyuziHPS Introduction
 Implementation of the connection of NyuziProcesser(FPGA), SDRAM controller and ARM Cortex-A9 Dual(HPS) with AXI interconnect.  
+NyuziProcesser Project: https://github.com/jbush001/NyuziProcessor  
 
 ##Project Configuration
 Assignments->Settings->Libraries add project library ./core.  

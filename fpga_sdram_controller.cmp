@@ -8,14 +8,14 @@
 			memory_mem_ck_n              : out   std_logic_vector(0 downto 0);                     -- mem_ck_n
 			memory_mem_cke               : out   std_logic_vector(0 downto 0);                     -- mem_cke
 			memory_mem_cs_n              : out   std_logic_vector(0 downto 0);                     -- mem_cs_n
-			memory_mem_dm                : out   std_logic_vector(0 downto 0);                     -- mem_dm
+			memory_mem_dm                : out   std_logic_vector(3 downto 0);                     -- mem_dm
 			memory_mem_ras_n             : out   std_logic_vector(0 downto 0);                     -- mem_ras_n
 			memory_mem_cas_n             : out   std_logic_vector(0 downto 0);                     -- mem_cas_n
 			memory_mem_we_n              : out   std_logic_vector(0 downto 0);                     -- mem_we_n
 			memory_mem_reset_n           : out   std_logic;                                        -- mem_reset_n
-			memory_mem_dq                : inout std_logic_vector(7 downto 0)  := (others => 'X'); -- mem_dq
-			memory_mem_dqs               : inout std_logic_vector(0 downto 0)  := (others => 'X'); -- mem_dqs
-			memory_mem_dqs_n             : inout std_logic_vector(0 downto 0)  := (others => 'X'); -- mem_dqs_n
+			memory_mem_dq                : inout std_logic_vector(31 downto 0) := (others => 'X'); -- mem_dq
+			memory_mem_dqs               : inout std_logic_vector(3 downto 0)  := (others => 'X'); -- mem_dqs
+			memory_mem_dqs_n             : inout std_logic_vector(3 downto 0)  := (others => 'X'); -- mem_dqs_n
 			memory_mem_odt               : out   std_logic_vector(0 downto 0);                     -- mem_odt
 			oct_rzqin                    : in    std_logic                     := 'X';             -- rzqin
 			axi_translator_slave_awid    : in    std_logic_vector(3 downto 0)  := (others => 'X'); -- awid

@@ -7,12 +7,12 @@ set ::GLOBAL_hps_sdram_p0_io_standard "SSTL-15"
 set ::GLOBAL_hps_sdram_p0_io_interface_type "HPAD"
 set ::GLOBAL_hps_sdram_p0_io_standard_differential "1.5-V SSTL"
 set ::GLOBAL_hps_sdram_p0_io_standard_cmos "1.5V"
-set ::GLOBAL_hps_sdram_p0_number_of_dqs_groups 1
+set ::GLOBAL_hps_sdram_p0_number_of_dqs_groups 4
 set ::GLOBAL_hps_sdram_p0_dqs_group_size 8
 set ::GLOBAL_hps_sdram_p0_number_of_ck_pins 1
-set ::GLOBAL_hps_sdram_p0_number_of_dm_pins 1
+set ::GLOBAL_hps_sdram_p0_number_of_dm_pins 4
 set ::GLOBAL_hps_sdram_p0_dqs_delay_chain_length 2
-set ::GLOBAL_hps_sdram_p0_uniphy_temp_ver_code 1983577380
+set ::GLOBAL_hps_sdram_p0_uniphy_temp_ver_code 1493250952
 # PLL Parameters
 
 #USER W A R N I N G !
@@ -77,7 +77,7 @@ set IP(eol_reduction_factor_write) 2.35
 # Can be either dynamic or static
 set IP(write_deskew_mode) "dynamic"
 set IP(read_deskew_mode) "dynamic"
-set IP(discrete_device) 1
+set IP(discrete_device) 0
 set IP(num_ranks) 1
 set IP(num_shadow_registers) 1
 set IP(tracking_enabled) 1

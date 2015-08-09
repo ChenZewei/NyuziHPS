@@ -1,0 +1,137 @@
+Info: Starting: Create block symbol file (.bsf)
+Info: ip-generate --project-directory="C:/Users/ThinkPad/Documents/Quartus II/NyuziHPS/" --output-directory="C:/Users/ThinkPad/Documents/Quartus II/NyuziHPS/fpga_sdram_controller/" --report-file="bsf:C:/Users/ThinkPad/Documents/Quartus II/NyuziHPS/fpga_sdram_controller.bsf" --system-info=DEVICE_FAMILY="Cyclone V" --system-info=DEVICE=5CSXFC6D6F31C8ES --system-info=DEVICE_SPEEDGRADE=8_H6 --component-file="C:/Users/ThinkPad/Documents/Quartus II/NyuziHPS/fpga_sdram_controller.qsys"
+Progress: Loading NyuziHPS/fpga_sdram_controller.qsys
+Progress: Reading input file
+Progress: Adding clk_0 [clock_source 13.0]
+Progress: Parameterizing module clk_0
+Progress: Adding mem_if_ddr3_emif_0 [altera_mem_if_ddr3_emif 13.0]
+Progress: Parameterizing module mem_if_ddr3_emif_0
+Progress: Adding axi_translator [altera_merlin_axi_translator 1.0]
+Progress: Parameterizing module axi_translator
+Progress: Building connections
+Progress: Parameterizing connections
+Progress: Validating
+Progress: Done reading input file
+Warning: fpga_sdram_controller.mem_if_ddr3_emif_0: ODT is disabled. Enabling ODT (Mode Register 1) may improve signal integrity
+Warning: fpga_sdram_controller.mem_if_ddr3_emif_0: 'Quick' simulation modes are NOT timing accurate. Some simulation memory models may issue warnings or errors
+Info: fpga_sdram_controller.axi_translator: Master burst length M0_BURST_LENGTH_WIDTH 8
+Info: fpga_sdram_controller.axi_translator: Master lock signals width M0_LOCK_WIDTH1
+Info: fpga_sdram_controller.axi_translator: Slave burst length S0_BURST_LENGTH_WIDTH 8
+Info: fpga_sdram_controller.axi_translator: Slave lock signals width S0_LOCK_WIDTH 1
+Warning: fpga_sdram_controller.mem_if_ddr3_emif_0: mem_if_ddr3_emif_0.status must be exported, or connected to a matching conduit.
+Warning: fpga_sdram_controller.mem_if_ddr3_emif_0: mem_if_ddr3_emif_0.pll_sharing must be exported, or connected to a matching conduit.
+Info: ip-generate succeeded.
+Info: Finished: Create block symbol file (.bsf)
+Info: 
+Info: Starting: Create HDL design files for synthesis
+Info: ip-generate --project-directory="C:/Users/ThinkPad/Documents/Quartus II/NyuziHPS/" --output-directory="C:/Users/ThinkPad/Documents/Quartus II/NyuziHPS/fpga_sdram_controller/synthesis/" --file-set=QUARTUS_SYNTH --report-file="sopcinfo:C:/Users/ThinkPad/Documents/Quartus II/NyuziHPS/fpga_sdram_controller.sopcinfo" --report-file="html:C:/Users/ThinkPad/Documents/Quartus II/NyuziHPS/fpga_sdram_controller.html" --report-file="qip:C:/Users/ThinkPad/Documents/Quartus II/NyuziHPS/fpga_sdram_controller/synthesis/fpga_sdram_controller.qip" --report-file="cmp:C:/Users/ThinkPad/Documents/Quartus II/NyuziHPS/fpga_sdram_controller.cmp" --report-file=svd --system-info=DEVICE_FAMILY="Cyclone V" --system-info=DEVICE=5CSXFC6D6F31C8ES --system-info=DEVICE_SPEEDGRADE=8_H6 --component-file="C:/Users/ThinkPad/Documents/Quartus II/NyuziHPS/fpga_sdram_controller.qsys" --language=VERILOG
+Progress: Loading NyuziHPS/fpga_sdram_controller.qsys
+Progress: Reading input file
+Progress: Adding clk_0 [clock_source 13.0]
+Progress: Parameterizing module clk_0
+Progress: Adding mem_if_ddr3_emif_0 [altera_mem_if_ddr3_emif 13.0]
+Progress: Parameterizing module mem_if_ddr3_emif_0
+Progress: Adding axi_translator [altera_merlin_axi_translator 1.0]
+Progress: Parameterizing module axi_translator
+Progress: Building connections
+Progress: Parameterizing connections
+Progress: Validating
+Progress: Done reading input file
+Warning: fpga_sdram_controller.mem_if_ddr3_emif_0: ODT is disabled. Enabling ODT (Mode Register 1) may improve signal integrity
+Warning: fpga_sdram_controller.mem_if_ddr3_emif_0: 'Quick' simulation modes are NOT timing accurate. Some simulation memory models may issue warnings or errors
+Info: fpga_sdram_controller.axi_translator: Master burst length M0_BURST_LENGTH_WIDTH 8
+Info: fpga_sdram_controller.axi_translator: Master lock signals width M0_LOCK_WIDTH1
+Info: fpga_sdram_controller.axi_translator: Slave burst length S0_BURST_LENGTH_WIDTH 8
+Info: fpga_sdram_controller.axi_translator: Slave lock signals width S0_LOCK_WIDTH 1
+Warning: fpga_sdram_controller.mem_if_ddr3_emif_0: mem_if_ddr3_emif_0.status must be exported, or connected to a matching conduit.
+Warning: fpga_sdram_controller.mem_if_ddr3_emif_0: mem_if_ddr3_emif_0.pll_sharing must be exported, or connected to a matching conduit.
+Info: fpga_sdram_controller: Generating fpga_sdram_controller "fpga_sdram_controller" for QUARTUS_SYNTH
+Info: pipeline_bridge_swap_transform: After transform: 3 modules, 6 connections
+Info: No custom instruction connections, skipping transform 
+Info: merlin_translator_transform: After transform: 5 modules, 12 connections
+Info: merlin_domain_transform: After transform: 10 modules, 37 connections
+Info: merlin_router_transform: After transform: 13 modules, 46 connections
+Info: merlin_burst_transform: After transform: 14 modules, 49 connections
+Info: com_altera_sopcmodel_transforms_avalon_CombinedWidthTransform: After transform: 15 modules, 53 connections
+Info: reset_adaptation_transform: After transform: 17 modules, 57 connections
+Info: merlin_network_to_switch_transform: After transform: 22 modules, 67 connections
+Info: Inserting clock-crossing logic between cmd_xbar_demux.src0 and cmd_xbar_mux.sink0
+Info: Inserting clock-crossing logic between cmd_xbar_demux_001.src0 and cmd_xbar_mux.sink1
+Info: Inserting clock-crossing logic between rsp_xbar_demux.src0 and rsp_xbar_mux.sink0
+Info: Inserting clock-crossing logic between rsp_xbar_demux.src1 and rsp_xbar_mux_001.sink0
+Info: com_altera_sopcmodel_transforms_avalon_ClockCrossingTransform: After transform: 26 modules, 87 connections
+Info: merlin_mm_transform: After transform: 26 modules, 87 connections
+Info: pipeline_bridge_swap_transform: After transform: 17 modules, 39 connections
+Info: No custom instruction connections, skipping transform 
+Info: merlin_translator_transform: After transform: 19 modules, 45 connections
+Info: merlin_mm_transform: After transform: 19 modules, 45 connections
+Info: mem_if_ddr3_emif_0: "fpga_sdram_controller" instantiated altera_mem_if_ddr3_emif "mem_if_ddr3_emif_0"
+Info: axi_translator: "fpga_sdram_controller" instantiated altera_merlin_axi_translator "axi_translator"
+Info: mem_if_ddr3_emif_0_avl_translator: "fpga_sdram_controller" instantiated altera_merlin_slave_translator "mem_if_ddr3_emif_0_avl_translator"
+Info: axi_translator_m0_translator_m0_agent: "fpga_sdram_controller" instantiated altera_merlin_axi_master_ni "axi_translator_m0_translator_m0_agent"
+Info: mem_if_ddr3_emif_0_avl_translator_avalon_universal_slave_0_agent: "fpga_sdram_controller" instantiated altera_merlin_slave_agent "mem_if_ddr3_emif_0_avl_translator_avalon_universal_slave_0_agent"
+Info: mem_if_ddr3_emif_0_avl_translator_avalon_universal_slave_0_agent_rsp_fifo: "fpga_sdram_controller" instantiated altera_avalon_sc_fifo "mem_if_ddr3_emif_0_avl_translator_avalon_universal_slave_0_agent_rsp_fifo"
+Info: addr_router: "fpga_sdram_controller" instantiated altera_merlin_router "addr_router"
+Info: id_router: "fpga_sdram_controller" instantiated altera_merlin_router "id_router"
+Info: burst_adapter: "fpga_sdram_controller" instantiated altera_merlin_burst_adapter "burst_adapter"
+Info: Reusing file C:/Users/ThinkPad/Documents/Quartus II/NyuziHPS/fpga_sdram_controller/synthesis/submodules/altera_merlin_address_alignment.sv
+Info: width_adapter: "fpga_sdram_controller" instantiated altera_merlin_combined_width_adapter "width_adapter"
+Info: Reusing file C:/Users/ThinkPad/Documents/Quartus II/NyuziHPS/fpga_sdram_controller/synthesis/submodules/altera_merlin_address_alignment.sv
+Info: Reusing file C:/Users/ThinkPad/Documents/Quartus II/NyuziHPS/fpga_sdram_controller/synthesis/submodules/altera_merlin_burst_uncompressor.sv
+Info: Reusing file C:/Users/ThinkPad/Documents/Quartus II/NyuziHPS/fpga_sdram_controller/synthesis/submodules/altera_avalon_sc_fifo.v
+Info: rst_controller: "fpga_sdram_controller" instantiated altera_reset_controller "rst_controller"
+Info: cmd_xbar_demux: "fpga_sdram_controller" instantiated altera_merlin_demultiplexer "cmd_xbar_demux"
+Info: cmd_xbar_mux: "fpga_sdram_controller" instantiated altera_merlin_multiplexer "cmd_xbar_mux"
+Info: rsp_xbar_demux: "fpga_sdram_controller" instantiated altera_merlin_demultiplexer "rsp_xbar_demux"
+Info: crosser: "fpga_sdram_controller" instantiated altera_avalon_st_handshake_clock_crosser "crosser"
+Info: pll0: "mem_if_ddr3_emif_0" instantiated altera_mem_if_ddr3_pll "pll0"
+Info: p0: Generating clock pair generator
+Info: p0: Generating fpga_sdram_controller_mem_if_ddr3_emif_0_p0_altdqdqs
+Info: p0: 
+Info: p0: *****************************
+Info: p0: 
+Info: p0: Remember to run the fpga_sdram_controller_mem_if_ddr3_emif_0_p0_pin_assignments.tcl
+Info: p0: script after running Synthesis and before Fitting.
+Info: p0: 
+Info: p0: *****************************
+Info: p0: 
+Info: p0: "mem_if_ddr3_emif_0" instantiated altera_mem_if_ddr3_phy_core "p0"
+Info: m0: "mem_if_ddr3_emif_0" instantiated altera_mem_if_ddr3_afi_mux "m0"
+Info: s0: Generating Qsys sequencer system
+Info: s0: QSYS sequencer system generated successfully
+Info: s0: "mem_if_ddr3_emif_0" instantiated altera_mem_if_ddr3_qseq "s0"
+Info: Reusing file C:/Users/ThinkPad/Documents/Quartus II/NyuziHPS/fpga_sdram_controller/synthesis/submodules/altera_merlin_arbitrator.sv
+Info: Reusing file C:/Users/ThinkPad/Documents/Quartus II/NyuziHPS/fpga_sdram_controller/synthesis/submodules/altera_merlin_burst_uncompressor.sv
+Info: Reusing file C:/Users/ThinkPad/Documents/Quartus II/NyuziHPS/fpga_sdram_controller/synthesis/submodules/altera_merlin_slave_agent.sv
+Info: pipeline_bridge_swap_transform: After transform: 10 modules, 24 connections
+Info: No custom instruction connections, skipping transform 
+Info: No Avalon connections, skipping transform 
+Info: merlin_translator_transform: After transform: 10 modules, 24 connections
+Info: reset_adaptation_transform: After transform: 11 modules, 26 connections
+Info: merlin_mm_transform: After transform: 11 modules, 26 connections
+Info: dmaster: "mem_if_ddr3_emif_0" instantiated alt_mem_if_jtag_master "dmaster"
+Info: pipeline_bridge_swap_transform: After transform: 5 modules, 8 connections
+Info: No custom instruction connections, skipping transform 
+Info: No Avalon connections, skipping transform 
+Info: merlin_translator_transform: After transform: 5 modules, 8 connections
+Info: c0: "mem_if_ddr3_emif_0" instantiated altera_mem_if_nextgen_ddr3_controller "c0"
+Info: oct0: "mem_if_ddr3_emif_0" instantiated altera_mem_if_oct "oct0"
+Info: dll0: "mem_if_ddr3_emif_0" instantiated altera_mem_if_dll "dll0"
+Info: dmaster_master_translator: "mem_if_ddr3_emif_0" instantiated altera_merlin_master_translator "dmaster_master_translator"
+Info: jtag_phy_embedded_in_jtag_master: "dmaster" instantiated altera_jtag_dc_streaming "jtag_phy_embedded_in_jtag_master"
+Info: Reusing file C:/Users/ThinkPad/Documents/Quartus II/NyuziHPS/fpga_sdram_controller/synthesis/submodules/altera_avalon_st_clock_crosser.v
+Info: Reusing file C:/Users/ThinkPad/Documents/Quartus II/NyuziHPS/fpga_sdram_controller/synthesis/submodules/altera_avalon_st_pipeline_base.v
+Info: timing_adt: Starting generation. 
+Info: timing_adt: "dmaster" instantiated timing_adapter "timing_adt"
+Info: b2p: "dmaster" instantiated altera_avalon_st_bytes_to_packets "b2p"
+Info: p2b: "dmaster" instantiated altera_avalon_st_packets_to_bytes "p2b"
+Info: transacto: "dmaster" instantiated altera_avalon_packets_to_master "transacto"
+Info: b2p_adapter: Starting generation. 
+Info: b2p_adapter: "dmaster" instantiated channel_adapter "b2p_adapter"
+Info: p2b_adapter: Starting generation. 
+Info: p2b_adapter: "dmaster" instantiated channel_adapter "p2b_adapter"
+Info: ng0: "c0" instantiated altera_mem_if_nextgen_ddr3_controller_core "ng0"
+Info: a0: "c0" instantiated alt_mem_ddrx_mm_st_converter "a0"
+Info: fpga_sdram_controller: Done fpga_sdram_controller" with 34 modules, 198 files, 4727142 bytes
+Info: ip-generate succeeded.
+Info: Finished: Create HDL design files for synthesis

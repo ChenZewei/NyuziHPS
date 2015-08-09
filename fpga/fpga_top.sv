@@ -23,7 +23,7 @@ module fpga_top(
 
 	// Buttons
 	input                       reset_btn,	// KEY[0]
-
+/*
 	// Der blinkenlights
 	output logic[17:0]          red_led,
 	output logic[8:0]           green_led,
@@ -31,11 +31,11 @@ module fpga_top(
 	output logic[6:0]           hex1,
 	output logic[6:0]           hex2,
 	output logic[6:0]           hex3,
-	
+/*	
 	// UART
 	output                      uart_tx,
 	input                       uart_rx,
-
+*/
 	// SDRAM	
 	/*//JBush SDRam controller 
 	output                      dram_clk,   //Clock
@@ -96,8 +96,8 @@ module fpga_top(
 	output                      vga_blank_n,
 	output                      vga_hs,
 	output                      vga_vs,
-	output                      vga_sync_n,
-	
+	output                      vga_sync_n);
+/*	
 	// SD card
 	output                      sd_clk,
 	inout                       sd_cmd,	
@@ -106,7 +106,7 @@ module fpga_top(
 	// PS/2 
 	inout                       ps2_clk,
 	inout                       ps2_data);
-
+*/
 	// We always access the full word width, so hard code these to active (low)
 	assign DRAM_dqm = 4'b0000;
 
@@ -353,7 +353,7 @@ module fpga_top(
 	vga_controller vga_controller(
 	      .axi_bus(axi_bus_s2.master),
 		  .*);
-
+/*
 `ifdef DEBUG_TRACE
 	logic[87:0] capture_data;
 	logic capture_enable;
@@ -402,7 +402,7 @@ module fpga_top(
 
 	assign fb_new_base = io_write_data;
 	assign fb_base_update_en = io_write_en && io_address == 'h28;
-					  
+/*					  
 	always_ff @(posedge clk, posedge reset)
 	begin
 		if (reset)
@@ -429,7 +429,7 @@ module fpga_top(
 			end
 		end
 	end
-
+/*
 	always_ff @(posedge clk)
 	begin
 		case (io_address)
@@ -445,6 +445,7 @@ module fpga_top(
 			default: io_read_data <= 0;
 		endcase
 	end
+*/
 endmodule
 
 // Local Variables:

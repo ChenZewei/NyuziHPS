@@ -31,7 +31,7 @@
 //   ARBITRATION_SCHEME   "round-robin"
 //   PIPELINE_ARB:        1
 //   PKT_TRANS_LOCK:      72 (arbitration locking enabled)
-//   ST_DATA_W:           123
+//   ST_DATA_W:           125
 //   ST_CHANNEL_W:        2
 // ------------------------------------------
 
@@ -41,14 +41,14 @@ module fpga_sdram_controller_cmd_xbar_mux
     // Sinks
     // ----------------------
     input                       sink0_valid,
-    input [123-1   : 0]  sink0_data,
+    input [125-1   : 0]  sink0_data,
     input [2-1: 0]  sink0_channel,
     input                       sink0_startofpacket,
     input                       sink0_endofpacket,
     output                      sink0_ready,
 
     input                       sink1_valid,
-    input [123-1   : 0]  sink1_data,
+    input [125-1   : 0]  sink1_data,
     input [2-1: 0]  sink1_channel,
     input                       sink1_startofpacket,
     input                       sink1_endofpacket,
@@ -59,7 +59,7 @@ module fpga_sdram_controller_cmd_xbar_mux
     // Source
     // ----------------------
     output                      src_valid,
-    output [123-1    : 0] src_data,
+    output [125-1    : 0] src_data,
     output [2-1 : 0] src_channel,
     output                      src_startofpacket,
     output                      src_endofpacket,
@@ -71,11 +71,11 @@ module fpga_sdram_controller_cmd_xbar_mux
     input clk,
     input reset
 );
-    localparam PAYLOAD_W        = 123 + 2 + 2;
+    localparam PAYLOAD_W        = 125 + 2 + 2;
     localparam NUM_INPUTS       = 2;
     localparam SHARE_COUNTER_W  = 1;
     localparam PIPELINE_ARB     = 1;
-    localparam ST_DATA_W        = 123;
+    localparam ST_DATA_W        = 125;
     localparam ST_CHANNEL_W     = 2;
     localparam PKT_TRANS_LOCK   = 72;
 

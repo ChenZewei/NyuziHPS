@@ -56,10 +56,10 @@
  <parameter name="globalResetBus" value="false" />
  <parameter name="hdlLanguage" value="VERILOG" />
  <parameter name="maxAdditionalLatency" value="1" />
- <parameter name="projectName" value="fpga_target.qpf" />
+ <parameter name="projectName" value="NyuziHPS.qpf" />
  <parameter name="sopcBorderPoints" value="false" />
  <parameter name="systemHash" value="1" />
- <parameter name="timeStamp" value="1438911920863" />
+ <parameter name="timeStamp" value="1439046400365" />
  <parameter name="useTestBenchNamingPattern" value="false" />
  <instanceScript></instanceScript>
  <interface name="clk" internal="clk_0.clk_in" type="clock" dir="end" />
@@ -96,7 +96,7 @@
   <parameter name="MEM_CLK_FREQ_MAX" value="400.0" />
   <parameter name="MEM_ROW_ADDR_WIDTH" value="13" />
   <parameter name="MEM_COL_ADDR_WIDTH" value="10" />
-  <parameter name="MEM_DQ_WIDTH" value="8" />
+  <parameter name="MEM_DQ_WIDTH" value="32" />
   <parameter name="MEM_DQ_PER_DQS" value="8" />
   <parameter name="MEM_BANKADDR_WIDTH" value="3" />
   <parameter name="MEM_IF_DM_PINS_EN" value="true" />

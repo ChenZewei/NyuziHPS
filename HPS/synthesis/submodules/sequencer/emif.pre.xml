@@ -89,12 +89,12 @@
         <define name="RW_MGR_MEM_CHIP_SELECT_WIDTH" value="1"/>
         <define name="RW_MGR_MEM_CLK_EN_WIDTH" value="1"/>
         <define name="RW_MGR_MEM_CONTROL_WIDTH" value="1"/>
-        <define name="RW_MGR_MEM_DATA_MASK_WIDTH" value="1"/>
-        <define name="RW_MGR_MEM_DATA_WIDTH" value="8"/>
+        <define name="RW_MGR_MEM_DATA_MASK_WIDTH" value="4"/>
+        <define name="RW_MGR_MEM_DATA_WIDTH" value="32"/>
         <define name="RW_MGR_MEM_DQ_PER_READ_DQS" value="8"/>
         <define name="RW_MGR_MEM_DQ_PER_WRITE_DQS" value="8"/>
-        <define name="RW_MGR_MEM_IF_READ_DQS_WIDTH" value="1"/>
-        <define name="RW_MGR_MEM_IF_WRITE_DQS_WIDTH" value="1"/>
+        <define name="RW_MGR_MEM_IF_READ_DQS_WIDTH" value="4"/>
+        <define name="RW_MGR_MEM_IF_WRITE_DQS_WIDTH" value="4"/>
         <define name="RW_MGR_MEM_NUMBER_OF_CS_PER_DIMM" value="1"/>
         <define name="RW_MGR_MEM_NUMBER_OF_RANKS" value="1"/>
         <define name="RW_MGR_MEM_ODT_WIDTH" value="1"/>
@@ -102,7 +102,7 @@
         <define name="RW_MGR_MEM_VIRTUAL_GROUPS_PER_WRITE_DQS" value="1"/>
         <define name="RW_MGR_MR0_BL" value="1"/>
         <define name="RW_MGR_MR0_CAS_LATENCY" value="3"/>
-        <define name="RW_MGR_TRUE_MEM_DATA_MASK_WIDTH" value="1"/>
+        <define name="RW_MGR_TRUE_MEM_DATA_MASK_WIDTH" value="4"/>
         <define name="RW_MGR_WRITE_TO_DEBUG_READ" value="1.0"/>
         <define name="SKEW_CALIBRATION" value="0"/>
         <define name="STATIC_FULL_CALIBRATION" value="1"/>
@@ -134,14 +134,14 @@
         <define name="MEM_BT" value="Sequential"/>
         <define name="MEM_BURST_LENGTH" value="8"/>
         <define name="MEM_CK_WIDTH" value="1"/>
-        <define name="MEM_DQ_WIDTH" value="8"/>
+        <define name="MEM_DQ_WIDTH" value="32"/>
         <define name="MEM_DRV_STR" value="RZQ/6"/>
         <define name="MEM_IF_BANKADDR_WIDTH" value="3"/>
-        <define name="MEM_IF_COL_ADDR_WIDTH" value="8"/>
+        <define name="MEM_IF_COL_ADDR_WIDTH" value="10"/>
         <define name="MEM_IF_DM_PINS_EN" value="true"/>
         <define name="MEM_IF_DQSN_EN" value="true"/>
-        <define name="MEM_IF_DQS_WIDTH" value="1"/>
-        <define name="MEM_IF_ROW_ADDR_WIDTH" value="12"/>
+        <define name="MEM_IF_DQS_WIDTH" value="4"/>
+        <define name="MEM_IF_ROW_ADDR_WIDTH" value="13"/>
         <define name="MEM_MIRROR_ADDRESSING" value="0"/>
         <define name="MEM_PD" value="DLL off"/>
         <define name="MEM_RTT_NOM" value="ODT Disabled"/>

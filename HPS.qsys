@@ -6,9 +6,12 @@
    version="1.0"
    description=""
    tags=""
-   categories="" />
+   categories="System" />
  <parameter name="bonusData"><![CDATA[bonusData 
 {
+   element $${FILENAME}
+   {
+   }
    element clk_0
    {
       datum _sortIndex
@@ -37,10 +40,10 @@
  <parameter name="globalResetBus" value="false" />
  <parameter name="hdlLanguage" value="VERILOG" />
  <parameter name="maxAdditionalLatency" value="1" />
- <parameter name="projectName" value="" />
+ <parameter name="projectName" value="NyuziHPS.qpf" />
  <parameter name="sopcBorderPoints" value="false" />
  <parameter name="systemHash" value="1" />
- <parameter name="timeStamp" value="1438953115059" />
+ <parameter name="timeStamp" value="1439072479741" />
  <parameter name="useTestBenchNamingPattern" value="false" />
  <instanceScript></instanceScript>
  <interface name="clk" internal="clk_0.clk_in" type="clock" dir="end" />
@@ -66,9 +69,9 @@
   <parameter name="DEVICE_DEPTH" value="1" />
   <parameter name="MEM_MIRROR_ADDRESSING" value="0" />
   <parameter name="MEM_CLK_FREQ_MAX" value="400.0" />
-  <parameter name="MEM_ROW_ADDR_WIDTH" value="12" />
-  <parameter name="MEM_COL_ADDR_WIDTH" value="8" />
-  <parameter name="MEM_DQ_WIDTH" value="8" />
+  <parameter name="MEM_ROW_ADDR_WIDTH" value="13" />
+  <parameter name="MEM_COL_ADDR_WIDTH" value="10" />
+  <parameter name="MEM_DQ_WIDTH" value="32" />
   <parameter name="MEM_DQ_PER_DQS" value="8" />
   <parameter name="MEM_BANKADDR_WIDTH" value="3" />
   <parameter name="MEM_IF_DM_PINS_EN" value="true" />

@@ -1,13 +1,13 @@
-Analysis & Synthesis Status : Successful - Fri Aug 07 22:39:13 2015
+Analysis & Synthesis Status : Successful - Sun Aug 09 07:13:54 2015
 Quartus II 64-Bit Version : 13.0.1 Build 232 06/12/2013 SP 1 SJ Full Version
 Revision Name : NyuziHPS
 Top-level Entity Name : fpga_top
 Family : Cyclone V
 Logic utilization (in ALMs) : N/A
-Total registers : 30498
-Total pins : 240
+Total registers : 31966
+Total pins : 175
 Total virtual pins : 0
-Total block memory bits : 1,758,391
+Total block memory bits : 1,991,863
 Total DSP Blocks : 88
 Total HSSI RX PCSs : 0
 Total HSSI PMA RX Deserializers : 0

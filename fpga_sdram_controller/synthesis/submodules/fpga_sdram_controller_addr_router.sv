@@ -49,14 +49,14 @@ module fpga_sdram_controller_addr_router_default_decode
                DEFAULT_RD_CHANNEL = -1,
                DEFAULT_DESTID = 0 
    )
-  (output [105 - 105 : 0] default_destination_id,
+  (output [107 - 107 : 0] default_destination_id,
    output [2-1 : 0] default_wr_channel,
    output [2-1 : 0] default_rd_channel,
    output [2-1 : 0] default_src_channel
   );
 
   assign default_destination_id = 
-    DEFAULT_DESTID[105 - 105 : 0];
+    DEFAULT_DESTID[107 - 107 : 0];
 
   generate begin : default_decode
     if (DEFAULT_CHANNEL == -1) begin
@@ -95,7 +95,7 @@ module fpga_sdram_controller_addr_router
     // Command Sink (Input)
     // -------------------
     input                       sink_valid,
-    input  [123-1 : 0]    sink_data,
+    input  [125-1 : 0]    sink_data,
     input                       sink_startofpacket,
     input                       sink_endofpacket,
     output                      sink_ready,
@@ -104,7 +104,7 @@ module fpga_sdram_controller_addr_router
     // Command Source (Output)
     // -------------------
     output                          src_valid,
-    output reg [123-1    : 0] src_data,
+    output reg [125-1    : 0] src_data,
     output reg [2-1 : 0] src_channel,
     output                          src_startofpacket,
     output                          src_endofpacket,
@@ -116,11 +116,11 @@ module fpga_sdram_controller_addr_router
     // -------------------------------------------------------
     localparam PKT_ADDR_H = 67;
     localparam PKT_ADDR_L = 36;
-    localparam PKT_DEST_ID_H = 105;
-    localparam PKT_DEST_ID_L = 105;
-    localparam PKT_PROTECTION_H = 116;
-    localparam PKT_PROTECTION_L = 114;
-    localparam ST_DATA_W = 123;
+    localparam PKT_DEST_ID_H = 107;
+    localparam PKT_DEST_ID_L = 107;
+    localparam PKT_PROTECTION_H = 118;
+    localparam PKT_PROTECTION_L = 116;
+    localparam ST_DATA_W = 125;
     localparam ST_CHANNEL_W = 2;
     localparam DECODER_TYPE = 0;
 
@@ -136,13 +136,13 @@ module fpga_sdram_controller_addr_router
     // Figure out the number of bits to mask off for each slave span
     // during address decoding
     // -------------------------------------------------------
-    localparam PAD0 = log2ceil(64'h4000000 - 64'h0); 
+    localparam PAD0 = log2ceil(64'h10000000 - 64'h0); 
     // -------------------------------------------------------
     // Work out which address bits are significant based on the
     // address range of the slaves. If the required width is too
     // large or too small, we use the address field width instead.
     // -------------------------------------------------------
-    localparam ADDR_RANGE = 64'h4000000;
+    localparam ADDR_RANGE = 64'h10000000;
     localparam RANGE_ADDR_WIDTH = log2ceil(ADDR_RANGE);
     localparam OPTIMIZED_ADDR_H = (RANGE_ADDR_WIDTH > PKT_ADDR_W) ||
                                   (RANGE_ADDR_WIDTH == 0) ?
@@ -185,7 +185,7 @@ module fpga_sdram_controller_addr_router
         // --------------------------------------------------
            
          
-          // ( 0 .. 4000000 )
+          // ( 0 .. 10000000 )
           src_channel = 2'b1;
           src_data[PKT_DEST_ID_H:PKT_DEST_ID_L] = 0;
 	     

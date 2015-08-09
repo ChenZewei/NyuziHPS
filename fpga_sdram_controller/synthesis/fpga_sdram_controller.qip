@@ -2,7 +2,7 @@ set_global_assignment -entity "fpga_sdram_controller" -library "fpga_sdram_contr
 set_global_assignment -entity "fpga_sdram_controller" -library "fpga_sdram_controller" -name IP_TOOL_VERSION "13.0sp1"
 set_global_assignment -entity "fpga_sdram_controller" -library "fpga_sdram_controller" -name IP_TOOL_ENV "Qsys"
 set_global_assignment -library "fpga_sdram_controller" -name SOPCINFO_FILE [file join $::quartus(qip_path) "../../fpga_sdram_controller.sopcinfo"]
-set_instance_assignment -entity "fpga_sdram_controller" -library "fpga_sdram_controller" -name SLD_INFO "QSYS_NAME fpga_sdram_controller HAS_SOPCINFO 1 GENERATION_ID 1438912171"
+set_instance_assignment -entity "fpga_sdram_controller" -library "fpga_sdram_controller" -name SLD_INFO "QSYS_NAME fpga_sdram_controller HAS_SOPCINFO 1 GENERATION_ID 1439046603"
 set_global_assignment -library "fpga_sdram_controller" -name MISC_FILE [file join $::quartus(qip_path) "../../fpga_sdram_controller.cmp"]
 set_global_assignment -name SYNTHESIS_ONLY_QIP ON
 set_global_assignment -library "fpga_sdram_controller" -name MISC_FILE [file join $::quartus(qip_path) "../../fpga_sdram_controller.qsys"]
@@ -18,13 +18,16 @@ set_global_assignment -library "fpga_sdram_controller" -name SYSTEMVERILOG_FILE 
 set_global_assignment -library "fpga_sdram_controller" -name VERILOG_FILE [file join $::quartus(qip_path) "submodules/altera_reset_controller.v"]
 set_global_assignment -library "fpga_sdram_controller" -name VERILOG_FILE [file join $::quartus(qip_path) "submodules/altera_reset_synchronizer.v"]
 set_global_assignment -library "fpga_sdram_controller" -name SDC_FILE [file join $::quartus(qip_path) "submodules/altera_reset_controller.sdc"]
-set_global_assignment -library "fpga_sdram_controller" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "submodules/altera_merlin_burst_adapter.sv"]
+set_global_assignment -library "fpga_sdram_controller" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "submodules/altera_merlin_combined_width_adapter.sv"]
+set_global_assignment -library "fpga_sdram_controller" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "submodules/altera_merlin_width_adapter.sv"]
 set_global_assignment -library "fpga_sdram_controller" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "submodules/altera_merlin_address_alignment.sv"]
+set_global_assignment -library "fpga_sdram_controller" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "submodules/altera_merlin_burst_uncompressor.sv"]
+set_global_assignment -library "fpga_sdram_controller" -name VERILOG_FILE [file join $::quartus(qip_path) "submodules/altera_avalon_sc_fifo.v"]
+set_global_assignment -library "fpga_sdram_controller" -name VERILOG_FILE [file join $::quartus(qip_path) "submodules/credit_producer.v"]
+set_global_assignment -library "fpga_sdram_controller" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "submodules/altera_merlin_burst_adapter.sv"]
 set_global_assignment -library "fpga_sdram_controller" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "submodules/fpga_sdram_controller_id_router.sv"]
 set_global_assignment -library "fpga_sdram_controller" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "submodules/fpga_sdram_controller_addr_router.sv"]
-set_global_assignment -library "fpga_sdram_controller" -name VERILOG_FILE [file join $::quartus(qip_path) "submodules/altera_avalon_sc_fifo.v"]
 set_global_assignment -library "fpga_sdram_controller" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "submodules/altera_merlin_slave_agent.sv"]
-set_global_assignment -library "fpga_sdram_controller" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "submodules/altera_merlin_burst_uncompressor.sv"]
 set_global_assignment -library "fpga_sdram_controller" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "submodules/altera_merlin_axi_master_ni.sv"]
 set_global_assignment -library "fpga_sdram_controller" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "submodules/altera_merlin_slave_translator.sv"]
 set_global_assignment -library "fpga_sdram_controller" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "submodules/altera_merlin_axi_translator.sv"]

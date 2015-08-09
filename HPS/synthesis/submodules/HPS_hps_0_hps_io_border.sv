@@ -23,18 +23,18 @@ module HPS_hps_0_hps_io_border(
  ,output wire [1 - 1 : 0 ] mem_cas_n
  ,output wire [1 - 1 : 0 ] mem_we_n
  ,output wire [1 - 1 : 0 ] mem_reset_n
- ,inout wire [8 - 1 : 0 ] mem_dq
- ,inout wire [1 - 1 : 0 ] mem_dqs
- ,inout wire [1 - 1 : 0 ] mem_dqs_n
+ ,inout wire [32 - 1 : 0 ] mem_dq
+ ,inout wire [4 - 1 : 0 ] mem_dqs
+ ,inout wire [4 - 1 : 0 ] mem_dqs_n
  ,output wire [1 - 1 : 0 ] mem_odt
- ,output wire [1 - 1 : 0 ] mem_dm
+ ,output wire [4 - 1 : 0 ] mem_dm
  ,input wire [1 - 1 : 0 ] oct_rzqin
 );
 
 
 hps_sdram hps_sdram_inst(
  .mem_dq({
-    mem_dq[7:0] // 7:0
+    mem_dq[31:0] // 31:0
   })
 ,.mem_odt({
     mem_odt[0:0] // 0:0
@@ -43,13 +43,13 @@ hps_sdram hps_sdram_inst(
     mem_ras_n[0:0] // 0:0
   })
 ,.mem_dqs_n({
-    mem_dqs_n[0:0] // 0:0
+    mem_dqs_n[3:0] // 3:0
   })
 ,.mem_dqs({
-    mem_dqs[0:0] // 0:0
+    mem_dqs[3:0] // 3:0
   })
 ,.mem_dm({
-    mem_dm[0:0] // 0:0
+    mem_dm[3:0] // 3:0
   })
 ,.mem_we_n({
     mem_we_n[0:0] // 0:0

@@ -169,12 +169,12 @@ parameter MEM_IF_BANKADDR_WIDTH     = 3;
 parameter MEM_IF_CK_WIDTH			= 1;
 parameter MEM_IF_CLK_EN_WIDTH		= 1;
 parameter MEM_IF_CS_WIDTH			= 1;
-parameter MEM_IF_DM_WIDTH         	= 1;
+parameter MEM_IF_DM_WIDTH         	= 4;
 parameter MEM_IF_CONTROL_WIDTH    	= 1; 
-parameter MEM_IF_DQ_WIDTH         	= 8;
-parameter MEM_IF_DQS_WIDTH         	= 1;
-parameter MEM_IF_READ_DQS_WIDTH    	= 1;
-parameter MEM_IF_WRITE_DQS_WIDTH   	= 1;
+parameter MEM_IF_DQ_WIDTH         	= 32;
+parameter MEM_IF_DQS_WIDTH         	= 4;
+parameter MEM_IF_READ_DQS_WIDTH    	= 4;
+parameter MEM_IF_WRITE_DQS_WIDTH   	= 4;
 parameter MEM_IF_ODT_WIDTH         	= 1;
 
 
@@ -203,8 +203,8 @@ parameter CALIB_REG_WIDTH = 8;
 parameter TB_PROTOCOL       = "DDR3";
 parameter TB_MEM_CLK_FREQ   = "350.0";
 parameter TB_RATE           = "FULL";
-parameter TB_MEM_DQ_WIDTH   = "8";
-parameter TB_MEM_DQS_WIDTH  = "1";
+parameter TB_MEM_DQ_WIDTH   = "32";
+parameter TB_MEM_DQS_WIDTH  = "4";
 parameter TB_PLL_DLL_MASTER = "true";
 
 parameter FAST_SIM_CALIBRATION = "false";

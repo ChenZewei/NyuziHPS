@@ -1,0 +1,73 @@
+<hps>
+  <system>
+    <config name='DEVICE_FAMILY' value='Cyclone V' />
+  </system>
+  <fpga_interfaces>
+    <config name='F2H_AXI_SLAVE' used='false' />
+    <config name='H2F_AXI_MASTER' used='true' />
+    <config name='LWH2F_AXI_MASTER' used='false' />
+    <config name='F2SDRAM_COMMAND_PORT_USED' value='0' />
+    <config name='F2SDRAM_READ_PORT_USED' value='0' />
+    <config name='F2SDRAM_WRITE_PORT_USED' value='0' />
+  </fpga_interfaces>
+  <peripherals>
+    <peripheral name='rgmii0' used='false' />
+    <peripheral name='rgmii1' used='false' />
+    <peripheral name='nand' used='false' />
+    <peripheral name='qspi' used='false'>
+      <config name='CONFIG_HPS_QSPI_CS3' value='0' />
+      <config name='CONFIG_HPS_QSPI_CS2' value='0' />
+      <config name='CONFIG_HPS_QSPI_CS1' value='0' />
+      <config name='CONFIG_HPS_QSPI_CS0' value='0' />
+    </peripheral>
+    <peripheral name='sdmmc' used='false'>
+      <config name='CONFIG_HPS_SDMMC_BUSWIDTH' value='0' />
+    </peripheral>
+    <peripheral name='usb0' used='false' />
+    <peripheral name='usb1' used='false' />
+    <peripheral name='spim0' used='false' />
+    <peripheral name='spim1' used='false' />
+    <peripheral name='spis0' used='false' />
+    <peripheral name='spis1' used='false' />
+    <peripheral name='uart0' used='false'>
+      <config name='CONFIG_HPS_UART0_TX' value='0' />
+      <config name='CONFIG_HPS_UART0_CTS' value='0' />
+      <config name='CONFIG_HPS_UART0_RTS' value='0' />
+      <config name='CONFIG_HPS_UART0_RX' value='0' />
+    </peripheral>
+    <peripheral name='uart1' used='false'>
+      <config name='CONFIG_HPS_UART1_TX' value='0' />
+      <config name='CONFIG_HPS_UART1_CTS' value='0' />
+      <config name='CONFIG_HPS_UART1_RTS' value='0' />
+      <config name='CONFIG_HPS_UART1_RX' value='0' />
+    </peripheral>
+    <peripheral name='i2c0' used='false' />
+    <peripheral name='i2c1' used='false' />
+    <peripheral name='i2c2' used='false' />
+    <peripheral name='i2c3' used='false' />
+    <peripheral name='can0' used='false' />
+    <peripheral name='can1' used='false' />
+    <peripheral name='trace' used='false' />
+  </peripherals>
+  <pin_muxes>
+    <pin_mux name='RGMII0USEFPGA' value='0' />
+    <pin_mux name='RGMII1USEFPGA' value='0' />
+    <pin_mux name='NANDUSEFPGA' value='0' />
+    <pin_mux name='QSPIUSEFPGA' value='0' />
+    <pin_mux name='SDMMCUSEFPGA' value='0' />
+    <pin_mux name='USB0USEFPGA' value='0' />
+    <pin_mux name='USB1USEFPGA' value='0' />
+    <pin_mux name='SPIM0USEFPGA' value='0' />
+    <pin_mux name='SPIM1USEFPGA' value='0' />
+    <pin_mux name='SPIS0USEFPGA' value='0' />
+    <pin_mux name='SPIS1USEFPGA' value='0' />
+    <pin_mux name='UART0USEFPGA' value='0' />
+    <pin_mux name='UART1USEFPGA' value='0' />
+    <pin_mux name='I2C0USEFPGA' value='0' />
+    <pin_mux name='I2C1USEFPGA' value='0' />
+    <pin_mux name='I2C2USEFPGA' value='0' />
+    <pin_mux name='I2C3USEFPGA' value='0' />
+    <pin_mux name='CAN0USEFPGA' value='0' />
+    <pin_mux name='CAN1USEFPGA' value='0' />
+  </pin_muxes>
+</hps>

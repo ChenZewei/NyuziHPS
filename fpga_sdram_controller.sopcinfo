@@ -5,11 +5,11 @@
  version="1.0"
  fabric="QSYS">
  <!-- Format version 13.0sp1 232 (Future versions may contain additional information.) -->
- <!-- 2015.08.07.09:49:31 -->
+ <!-- 2015.08.08.23:10:03 -->
  <!-- A collection of modules and connections -->
  <parameter name="AUTO_GENERATION_ID">
   <type>java.lang.Integer</type>
-  <value>1438912171</value>
+  <value>1439046603</value>
   <derived>false</derived>
   <enabled>true</enabled>
   <visible>false</visible>
@@ -396,7 +396,7 @@ parameters are a RESULT of the module parameters. -->
 the requested settings for a module instance. -->
   <assignment>
    <name>embeddedsw.memoryInfo.MEM_INIT_DATA_WIDTH</name>
-   <value>32</value>
+   <value>128</value>
   </assignment>
   <assignment>
    <name>postgeneration.simulation.init_file.param_name</name>
@@ -504,11 +504,11 @@ the requested settings for a module instance. -->
   </assignment>
   <assignment>
    <name>testbench.partner.mem_model.parameter.AFI_DM_WIDTH</name>
-   <value>4</value>
+   <value>16</value>
   </assignment>
   <assignment>
    <name>testbench.partner.mem_model.parameter.AFI_DQ_WIDTH</name>
-   <value>32</value>
+   <value>128</value>
   </assignment>
   <assignment>
    <name>testbench.partner.mem_model.parameter.AFI_ODT_WIDTH</name>
@@ -524,7 +524,7 @@ the requested settings for a module instance. -->
   </assignment>
   <assignment>
    <name>testbench.partner.mem_model.parameter.AFI_RRANK_WIDTH</name>
-   <value>2</value>
+   <value>8</value>
   </assignment>
   <assignment>
    <name>testbench.partner.mem_model.parameter.AFI_WLAT_WIDTH</name>
@@ -532,11 +532,11 @@ the requested settings for a module instance. -->
   </assignment>
   <assignment>
    <name>testbench.partner.mem_model.parameter.AFI_WRANK_WIDTH</name>
-   <value>2</value>
+   <value>8</value>
   </assignment>
   <assignment>
    <name>testbench.partner.mem_model.parameter.AFI_WRITE_DQS_WIDTH</name>
-   <value>2</value>
+   <value>8</value>
   </assignment>
   <assignment>
    <name>testbench.partner.mem_model.parameter.ALTMEMPHY_COMPATIBLE_MODE</name>
@@ -612,7 +612,7 @@ the requested settings for a module instance. -->
   </assignment>
   <assignment>
    <name>testbench.partner.mem_model.parameter.FLY_BY</name>
-   <value>false</value>
+   <value>true</value>
   </assignment>
   <assignment>
    <name>testbench.partner.mem_model.parameter.FORCE_DQS_TRACKING</name>
@@ -744,7 +744,7 @@ the requested settings for a module instance. -->
   </assignment>
   <assignment>
    <name>testbench.partner.mem_model.parameter.MEM_DQ_WIDTH</name>
-   <value>8</value>
+   <value>32</value>
   </assignment>
   <assignment>
    <name>testbench.partner.mem_model.parameter.MEM_DRV_STR</name>
@@ -816,7 +816,7 @@ the requested settings for a module instance. -->
   </assignment>
   <assignment>
    <name>testbench.partner.mem_model.parameter.MEM_IF_DM_WIDTH</name>
-   <value>1</value>
+   <value>4</value>
   </assignment>
   <assignment>
    <name>testbench.partner.mem_model.parameter.MEM_IF_DQSN_EN</name>
@@ -824,11 +824,11 @@ the requested settings for a module instance. -->
   </assignment>
   <assignment>
    <name>testbench.partner.mem_model.parameter.MEM_IF_DQS_WIDTH</name>
-   <value>1</value>
+   <value>4</value>
   </assignment>
   <assignment>
    <name>testbench.partner.mem_model.parameter.MEM_IF_DQ_WIDTH</name>
-   <value>8</value>
+   <value>32</value>
   </assignment>
   <assignment>
    <name>testbench.partner.mem_model.parameter.MEM_IF_NUMBER_OF_RANKS</name>
@@ -844,7 +844,7 @@ the requested settings for a module instance. -->
   </assignment>
   <assignment>
    <name>testbench.partner.mem_model.parameter.MEM_IF_READ_DQS_WIDTH</name>
-   <value>1</value>
+   <value>4</value>
   </assignment>
   <assignment>
    <name>testbench.partner.mem_model.parameter.MEM_IF_ROW_ADDR_WIDTH</name>
@@ -856,7 +856,7 @@ the requested settings for a module instance. -->
   </assignment>
   <assignment>
    <name>testbench.partner.mem_model.parameter.MEM_IF_WRITE_DQS_WIDTH</name>
-   <value>1</value>
+   <value>4</value>
   </assignment>
   <assignment>
    <name>testbench.partner.mem_model.parameter.MEM_IF_WR_TO_RD_TURNAROUND_OCT</name>
@@ -1564,7 +1564,7 @@ the requested settings for a module instance. -->
   </parameter>
   <parameter name="MEM_IF_READ_DQS_WIDTH">
    <type>int</type>
-   <value>1</value>
+   <value>4</value>
    <derived>true</derived>
    <enabled>true</enabled>
    <visible>false</visible>
@@ -1572,7 +1572,7 @@ the requested settings for a module instance. -->
   </parameter>
   <parameter name="MEM_IF_WRITE_DQS_WIDTH">
    <type>int</type>
-   <value>1</value>
+   <value>4</value>
    <derived>true</derived>
    <enabled>true</enabled>
    <visible>false</visible>
@@ -1612,7 +1612,7 @@ the requested settings for a module instance. -->
   </parameter>
   <parameter name="MEM_IF_DM_WIDTH">
    <type>int</type>
-   <value>1</value>
+   <value>4</value>
    <derived>true</derived>
    <enabled>true</enabled>
    <visible>false</visible>
@@ -1668,7 +1668,7 @@ the requested settings for a module instance. -->
   </parameter>
   <parameter name="MEM_IF_DQS_WIDTH">
    <type>int</type>
-   <value>1</value>
+   <value>4</value>
    <derived>true</derived>
    <enabled>true</enabled>
    <visible>true</visible>
@@ -1700,7 +1700,7 @@ the requested settings for a module instance. -->
   </parameter>
   <parameter name="MEM_IF_DQ_WIDTH">
    <type>int</type>
-   <value>8</value>
+   <value>32</value>
    <derived>true</derived>
    <enabled>true</enabled>
    <visible>false</visible>
@@ -1876,7 +1876,7 @@ the requested settings for a module instance. -->
   </parameter>
   <parameter name="FLY_BY">
    <type>boolean</type>
-   <value>false</value>
+   <value>true</value>
    <derived>true</derived>
    <enabled>true</enabled>
    <visible>false</visible>
@@ -2100,7 +2100,7 @@ the requested settings for a module instance. -->
   </parameter>
   <parameter name="MEM_DQ_WIDTH">
    <type>int</type>
-   <value>8</value>
+   <value>32</value>
    <derived>false</derived>
    <enabled>true</enabled>
    <visible>true</visible>
@@ -2772,7 +2772,7 @@ the requested settings for a module instance. -->
   </parameter>
   <parameter name="AFI_DM_WIDTH">
    <type>int</type>
-   <value>4</value>
+   <value>16</value>
    <derived>true</derived>
    <enabled>true</enabled>
    <visible>false</visible>
@@ -2780,7 +2780,7 @@ the requested settings for a module instance. -->
   </parameter>
   <parameter name="AFI_DQ_WIDTH">
    <type>int</type>
-   <value>32</value>
+   <value>128</value>
    <derived>true</derived>
    <enabled>true</enabled>
    <visible>false</visible>
@@ -2796,7 +2796,7 @@ the requested settings for a module instance. -->
   </parameter>
   <parameter name="AFI_WRITE_DQS_WIDTH">
    <type>int</type>
-   <value>2</value>
+   <value>8</value>
    <derived>true</derived>
    <enabled>true</enabled>
    <visible>false</visible>
@@ -2820,7 +2820,7 @@ the requested settings for a module instance. -->
   </parameter>
   <parameter name="AFI_RRANK_WIDTH">
    <type>int</type>
-   <value>2</value>
+   <value>8</value>
    <derived>true</derived>
    <enabled>true</enabled>
    <visible>false</visible>
@@ -2828,7 +2828,7 @@ the requested settings for a module instance. -->
   </parameter>
   <parameter name="AFI_WRANK_WIDTH">
    <type>int</type>
-   <value>2</value>
+   <value>8</value>
    <derived>true</derived>
    <enabled>true</enabled>
    <visible>false</visible>
@@ -3044,7 +3044,7 @@ the requested settings for a module instance. -->
   </parameter>
   <parameter name="AVL_BE_WIDTH">
    <type>int</type>
-   <value>4</value>
+   <value>16</value>
    <derived>true</derived>
    <enabled>true</enabled>
    <visible>false</visible>
@@ -3052,7 +3052,7 @@ the requested settings for a module instance. -->
   </parameter>
   <parameter name="AVL_DATA_WIDTH">
    <type>int</type>
-   <value>32</value>
+   <value>128</value>
    <derived>true</derived>
    <enabled>false</enabled>
    <visible>true</visible>
@@ -3068,7 +3068,7 @@ the requested settings for a module instance. -->
   </parameter>
   <parameter name="AVL_NUM_SYMBOLS">
    <type>int</type>
-   <value>4</value>
+   <value>16</value>
    <derived>true</derived>
    <enabled>true</enabled>
    <visible>false</visible>
@@ -3196,7 +3196,7 @@ the requested settings for a module instance. -->
   </parameter>
   <parameter name="CFG_INTERFACE_WIDTH">
    <type>int</type>
-   <value>8</value>
+   <value>32</value>
    <derived>true</derived>
    <enabled>true</enabled>
    <visible>false</visible>
@@ -8916,7 +8916,7 @@ the requested settings for a module instance. -->
   </parameter>
   <parameter name="TB_MEM_IF_DQ_WIDTH">
    <type>int</type>
-   <value>8</value>
+   <value>32</value>
    <derived>true</derived>
    <enabled>true</enabled>
    <visible>false</visible>
@@ -8924,7 +8924,7 @@ the requested settings for a module instance. -->
   </parameter>
   <parameter name="TB_MEM_IF_READ_DQS_WIDTH">
    <type>int</type>
-   <value>1</value>
+   <value>4</value>
    <derived>true</derived>
    <enabled>true</enabled>
    <visible>false</visible>
@@ -13130,7 +13130,7 @@ parameters are a RESULT of the module parameters. -->
    <port>
     <name>mem_dm</name>
     <direction>Output</direction>
-    <width>1</width>
+    <width>4</width>
     <role>mem_dm</role>
    </port>
    <port>
@@ -13160,19 +13160,19 @@ parameters are a RESULT of the module parameters. -->
    <port>
     <name>mem_dq</name>
     <direction>Bidir</direction>
-    <width>8</width>
+    <width>32</width>
     <role>mem_dq</role>
    </port>
    <port>
     <name>mem_dqs</name>
     <direction>Bidir</direction>
-    <width>1</width>
+    <width>4</width>
     <role>mem_dqs</role>
    </port>
    <port>
     <name>mem_dqs_n</name>
     <direction>Bidir</direction>
-    <width>1</width>
+    <width>4</width>
     <role>mem_dqs_n</role>
    </port>
    <port>
@@ -13220,7 +13220,7 @@ parameters are a RESULT of the module parameters. -->
    </parameter>
    <parameter name="addressSpan">
     <type>java.math.BigInteger</type>
-    <value>67108864</value>
+    <value>268435456</value>
     <derived>true</derived>
     <enabled>true</enabled>
     <visible>false</visible>
@@ -13535,19 +13535,19 @@ parameters are a RESULT of the module parameters. -->
    <port>
     <name>avl_rdata</name>
     <direction>Output</direction>
-    <width>32</width>
+    <width>128</width>
     <role>readdata</role>
    </port>
    <port>
     <name>avl_wdata</name>
     <direction>Input</direction>
-    <width>32</width>
+    <width>128</width>
     <role>writedata</role>
    </port>
    <port>
     <name>avl_be</name>
     <direction>Input</direction>
-    <width>4</width>
+    <width>16</width>
     <role>byteenable</role>
    </port>
    <port>
@@ -15721,7 +15721,7 @@ parameters are a RESULT of the module parameters. -->
     <slaveName>avl</slaveName>
     <name>mem_if_ddr3_emif_0.avl</name>
     <baseAddress>0</baseAddress>
-    <span>67108864</span>
+    <span>268435456</span>
    </memoryBlock>
   </interface>
  </module>
@@ -15913,74 +15913,10 @@ parameters are a RESULT of the module parameters. -->
  </connection>
  <plugin>
   <instanceCount>1</instanceCount>
-  <name>avalon</name>
-  <type>com.altera.entityinterfaces.IElementClass</type>
-  <subtype>com.altera.entityinterfaces.IConnection</subtype>
-  <displayName>Avalon Memory Mapped Connection</displayName>
-  <version>13.0</version>
- </plugin>
- <plugin>
-  <instanceCount>1</instanceCount>
-  <name>alt_mem_if_jtag_master</name>
-  <type>com.altera.entityinterfaces.IElementClass</type>
-  <subtype>com.altera.entityinterfaces.IModule</subtype>
-  <displayName>alt_mem_if JTAG to Avalon Master Bridge</displayName>
-  <version>100.99.98.97</version>
- </plugin>
- <plugin>
-  <instanceCount>1</instanceCount>
-  <name>reset_source</name>
+  <name>altera_axi4_slave</name>
   <type>com.altera.entityinterfaces.IElementClass</type>
   <subtype>com.altera.entityinterfaces.IMutableConnectionPoint</subtype>
-  <displayName>Reset Output</displayName>
-  <version>13.0</version>
- </plugin>
- <plugin>
-  <instanceCount>1</instanceCount>
-  <name>avalon_master</name>
-  <type>com.altera.entityinterfaces.IElementClass</type>
-  <subtype>com.altera.entityinterfaces.IMutableConnectionPoint</subtype>
-  <displayName>Avalon Memory Mapped Master</displayName>
-  <version>13.0</version>
- </plugin>
- <plugin>
-  <instanceCount>1</instanceCount>
-  <name>altera_mem_if_ddr3_emif</name>
-  <type>com.altera.entityinterfaces.IElementClass</type>
-  <subtype>com.altera.entityinterfaces.IModule</subtype>
-  <displayName>DDR3 SDRAM Controller with UniPHY</displayName>
-  <version>13.0</version>
- </plugin>
- <plugin>
-  <instanceCount>1</instanceCount>
-  <name>avalon_slave</name>
-  <type>com.altera.entityinterfaces.IElementClass</type>
-  <subtype>com.altera.entityinterfaces.IMutableConnectionPoint</subtype>
-  <displayName>Avalon Memory Mapped Slave</displayName>
-  <version>13.0</version>
- </plugin>
- <plugin>
-  <instanceCount>3</instanceCount>
-  <name>reset</name>
-  <type>com.altera.entityinterfaces.IElementClass</type>
-  <subtype>com.altera.entityinterfaces.IConnection</subtype>
-  <displayName>Reset Connection</displayName>
-  <version>13.0</version>
- </plugin>
- <plugin>
-  <instanceCount>2</instanceCount>
-  <name>clock_source</name>
-  <type>com.altera.entityinterfaces.IElementClass</type>
-  <subtype>com.altera.entityinterfaces.IMutableConnectionPoint</subtype>
-  <displayName>Clock Output</displayName>
-  <version>13.0</version>
- </plugin>
- <plugin>
-  <instanceCount>1</instanceCount>
-  <name>clock_source</name>
-  <type>com.altera.entityinterfaces.IElementClass</type>
-  <subtype>com.altera.entityinterfaces.IMutableConnectionPoint</subtype>
-  <displayName>Clock Output</displayName>
+  <displayName>AXI4 Slave</displayName>
   <version>13.0</version>
  </plugin>
  <plugin>
@@ -16000,11 +15936,91 @@ parameters are a RESULT of the module parameters. -->
   <version>13.0</version>
  </plugin>
  <plugin>
-  <instanceCount>4</instanceCount>
+  <instanceCount>3</instanceCount>
+  <name>reset_source</name>
+  <type>com.altera.entityinterfaces.IElementClass</type>
+  <subtype>com.altera.entityinterfaces.IMutableConnectionPoint</subtype>
+  <displayName>Reset Output</displayName>
+  <version>13.0</version>
+ </plugin>
+ <plugin>
+  <instanceCount>3</instanceCount>
+  <name>clock_sink</name>
+  <type>com.altera.entityinterfaces.IElementClass</type>
+  <subtype>com.altera.entityinterfaces.IMutableConnectionPoint</subtype>
+  <displayName>Clock Input</displayName>
+  <version>13.0</version>
+ </plugin>
+ <plugin>
+  <instanceCount>3</instanceCount>
+  <name>reset</name>
+  <type>com.altera.entityinterfaces.IElementClass</type>
+  <subtype>com.altera.entityinterfaces.IConnection</subtype>
+  <displayName>Reset Connection</displayName>
+  <version>13.0</version>
+ </plugin>
+ <plugin>
+  <instanceCount>1</instanceCount>
+  <name>clock_source</name>
+  <type>com.altera.entityinterfaces.IElementClass</type>
+  <subtype>com.altera.entityinterfaces.IMutableConnectionPoint</subtype>
+  <displayName>Clock Output</displayName>
+  <version>13.0</version>
+ </plugin>
+ <plugin>
+  <instanceCount>1</instanceCount>
+  <name>avalon_slave</name>
+  <type>com.altera.entityinterfaces.IElementClass</type>
+  <subtype>com.altera.entityinterfaces.IMutableConnectionPoint</subtype>
+  <displayName>Avalon Memory Mapped Slave</displayName>
+  <version>13.0</version>
+ </plugin>
+ <plugin>
+  <instanceCount>1</instanceCount>
+  <name>avalon</name>
+  <type>com.altera.entityinterfaces.IElementClass</type>
+  <subtype>com.altera.entityinterfaces.IConnection</subtype>
+  <displayName>Avalon Memory Mapped Connection</displayName>
+  <version>13.0</version>
+ </plugin>
+ <plugin>
+  <instanceCount>1</instanceCount>
+  <name>reset_source</name>
+  <type>com.altera.entityinterfaces.IElementClass</type>
+  <subtype>com.altera.entityinterfaces.IMutableConnectionPoint</subtype>
+  <displayName>Reset Output</displayName>
+  <version>13.0</version>
+ </plugin>
+ <plugin>
+  <instanceCount>1</instanceCount>
+  <name>avalon_master</name>
+  <type>com.altera.entityinterfaces.IElementClass</type>
+  <subtype>com.altera.entityinterfaces.IMutableConnectionPoint</subtype>
+  <displayName>Avalon Memory Mapped Master</displayName>
+  <version>13.0</version>
+ </plugin>
+ <plugin>
+  <instanceCount>1</instanceCount>
   <name>reset_sink</name>
   <type>com.altera.entityinterfaces.IElementClass</type>
   <subtype>com.altera.entityinterfaces.IMutableConnectionPoint</subtype>
   <displayName>Reset Input</displayName>
+  <version>13.0</version>
+ </plugin>
+ <plugin>
+  <instanceCount>1</instanceCount>
+  <name>alt_mem_if_jtag_master</name>
+  <type>com.altera.entityinterfaces.IElementClass</type>
+  <subtype>com.altera.entityinterfaces.IModule</subtype>
+  <displayName>alt_mem_if JTAG to Avalon Master Bridge</displayName>
+  <version>100.99.98.97</version>
+ </plugin>
+ <plugin>
+  <instanceCount>2</instanceCount>
+  <name>clock_source</name>
+  <type>com.altera.entityinterfaces.IElementClass</type>
+  <subtype>com.altera.entityinterfaces.IMutableConnectionPoint</subtype>
+  <displayName>Clock Output</displayName>
   <version>13.0</version>
  </plugin>
  <plugin>
@@ -16016,38 +16032,6 @@ parameters are a RESULT of the module parameters. -->
   <version>13.0</version>
  </plugin>
  <plugin>
-  <instanceCount>2</instanceCount>
-  <name>clock</name>
-  <type>com.altera.entityinterfaces.IElementClass</type>
-  <subtype>com.altera.entityinterfaces.IConnection</subtype>
-  <displayName>Clock Connection</displayName>
-  <version>13.0</version>
- </plugin>
- <plugin>
-  <instanceCount>3</instanceCount>
-  <name>clock_sink</name>
-  <type>com.altera.entityinterfaces.IElementClass</type>
-  <subtype>com.altera.entityinterfaces.IMutableConnectionPoint</subtype>
-  <displayName>Clock Input</displayName>
-  <version>13.0</version>
- </plugin>
- <plugin>
-  <instanceCount>3</instanceCount>
-  <name>reset_source</name>
-  <type>com.altera.entityinterfaces.IElementClass</type>
-  <subtype>com.altera.entityinterfaces.IMutableConnectionPoint</subtype>
-  <displayName>Reset Output</displayName>
-  <version>13.0</version>
- </plugin>
- <plugin>
-  <instanceCount>1</instanceCount>
-  <name>altera_axi4_slave</name>
-  <type>com.altera.entityinterfaces.IElementClass</type>
-  <subtype>com.altera.entityinterfaces.IMutableConnectionPoint</subtype>
-  <displayName>AXI4 Slave</displayName>
-  <version>13.0</version>
- </plugin>
- <plugin>
   <instanceCount>1</instanceCount>
   <name>altera_merlin_axi_translator</name>
   <type>com.altera.entityinterfaces.IElementClass</type>
@@ -16056,6 +16040,14 @@ parameters are a RESULT of the module parameters. -->
   <version>1.0</version>
  </plugin>
  <plugin>
+  <instanceCount>2</instanceCount>
+  <name>clock</name>
+  <type>com.altera.entityinterfaces.IElementClass</type>
+  <subtype>com.altera.entityinterfaces.IConnection</subtype>
+  <displayName>Clock Connection</displayName>
+  <version>13.0</version>
+ </plugin>
+ <plugin>
   <instanceCount>1</instanceCount>
   <name>clock_sink</name>
   <type>com.altera.entityinterfaces.IElementClass</type>
@@ -16065,6 +16057,14 @@ parameters are a RESULT of the module parameters. -->
  </plugin>
  <plugin>
   <instanceCount>1</instanceCount>
+  <name>altera_mem_if_ddr3_emif</name>
+  <type>com.altera.entityinterfaces.IElementClass</type>
+  <subtype>com.altera.entityinterfaces.IModule</subtype>
+  <displayName>DDR3 SDRAM Controller with UniPHY</displayName>
+  <version>13.0</version>
+ </plugin>
+ <plugin>
+  <instanceCount>4</instanceCount>
   <name>reset_sink</name>
   <type>com.altera.entityinterfaces.IElementClass</type>
   <subtype>com.altera.entityinterfaces.IMutableConnectionPoint</subtype>

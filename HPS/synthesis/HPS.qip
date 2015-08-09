@@ -2,7 +2,7 @@ set_global_assignment -entity "HPS" -library "HPS" -name IP_TOOL_NAME "Qsys"
 set_global_assignment -entity "HPS" -library "HPS" -name IP_TOOL_VERSION "13.0sp1"
 set_global_assignment -entity "HPS" -library "HPS" -name IP_TOOL_ENV "Qsys"
 set_global_assignment -library "HPS" -name SOPCINFO_FILE [file join $::quartus(qip_path) "../../HPS.sopcinfo"]
-set_instance_assignment -entity "HPS" -library "HPS" -name SLD_INFO "QSYS_NAME HPS HAS_SOPCINFO 1 GENERATION_ID 1438953505"
+set_instance_assignment -entity "HPS" -library "HPS" -name SLD_INFO "QSYS_NAME HPS HAS_SOPCINFO 1 GENERATION_ID 1439073107"
 set_global_assignment -library "HPS" -name MISC_FILE [file join $::quartus(qip_path) "../../HPS.cmp"]
 set_global_assignment -name SYNTHESIS_ONLY_QIP ON
 set_global_assignment -library "HPS" -name MISC_FILE [file join $::quartus(qip_path) "../../HPS.qsys"]

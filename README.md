@@ -6,7 +6,8 @@ I have roughly modified the AXI interconnect in the NyuziProcesser project to ad
 NyuziProcesser Project: https://github.com/jbush001/NyuziProcessor  
 通过AXI interconnect实现Nyuziprocesser与SDRAM Controller和HPS(ARM Cortex-A9 Dual)的连接。  
 我已经粗略的修改了NyuziProcesser中的AXI interconnect来增加更多的axi master和slave端口以及非常简单的仲裁。  
-![image](https://github.com/ChenZewei/NyuziHPS/raw/master/pic/environment.jpg)
+![image](https://github.com/ChenZewei/NyuziHPS/raw/master/pic/environment.png)  
+
 ###Project Component 项目组成
 Folder core includes NyuziProcesser core and folder fpga includes NyuziProcesser environment like axi interconnect.  
 Folder fpga_sdram_controller includes the altera's sdram controller ip core.  

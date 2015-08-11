@@ -7,6 +7,14 @@ NyuziProcesser Project: https://github.com/jbush001/NyuziProcessor
 通过AXI interconnect实现Nyuziprocesser与SDRAM Controller和HPS(ARM Cortex-A9 Dual)的连接。  
 我已经粗略的修改了NyuziProcesser中的AXI interconnect来增加更多的axi master和slave端口以及非常简单的仲裁。  
 
+###Project Component 项目组成
+Folder core includes NyuziProcesser core and folder fpga includes NyuziProcesser environment like axi interconnect.  
+Folder fpga_sdram_controller includes the altera's sdram controller ip core.  
+Folder HPS includes the HPS section, which provide axi master port to be connected with.  
+文件夹core是NyuziProcesser的核心，文件夹fpga是其环境包括axi interconnect。  
+文件夹fpga_sdram_controller包含了altera的sdram controller ip核。  
+文件夹HPS包含了硬核部分，提供了用于连接的axi master端口。  
+
 ##Project Configuration 项目配置
 Assignments->Settings->Libraries add project library ./core.  
 Assignments->Settings->Analysis&Synthesis Settings->Verilog HDL Input add macro VENDRO_ALTERA which setting is "1".  

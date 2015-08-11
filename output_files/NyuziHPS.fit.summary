@@ -1,12 +1,12 @@
-Fitter Status : Successful - Sun Aug 09 07:57:43 2015
+Fitter Status : Failed - Tue Aug 11 16:07:18 2015
 Quartus II 64-Bit Version : 13.0.1 Build 232 06/12/2013 SP 1 SJ Full Version
 Revision Name : NyuziHPS
 Top-level Entity Name : fpga_top
 Family : Cyclone V
 Device : 5CSXFC6D6F31C8ES
 Timing Models : Preliminary
-Logic utilization (in ALMs) : 32,200 / 41,910 ( 77 % )
-Total registers : 33530
+Logic utilization (in ALMs) : 32,267 / 41,910 ( 77 % )
+Total registers : 31676
 Total pins : 175 / 499 ( 35 % )
 Total virtual pins : 0
 Total block memory bits : 1,991,863 / 5,662,720 ( 35 % )
